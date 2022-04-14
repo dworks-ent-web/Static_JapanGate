@@ -1,0 +1,22 @@
+//基本ブレークポイント
+@mixin forPc {
+	@media screen and (min-width: 800px) {
+		@content;
+	}
+}
+@mixin forSp {
+	@media screen and (max-width: 799px) {
+		@content;
+	}
+}
+
+// clearfix
+@mixin clearfix(){
+	&::after{
+		content: "";
+		clear: both;
+		display: block;
+		height: 0;
+		visibility: hidden;
+	}
+}
