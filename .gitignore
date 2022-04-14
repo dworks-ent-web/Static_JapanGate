@@ -1,0 +1,7 @@
+# ignore everything in the "css" directory
+/assets/css/*.css
+/assets/css/*.map
+/assets/scss/*.css
+/assets/scss/_common/*.css
+/assets/scss/_page/*.css
+/assets/scss/_setting/*.css
