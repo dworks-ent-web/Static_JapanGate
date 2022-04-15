@@ -61,13 +61,13 @@
                     <div class="section__input">
                         <p><span>必須</span>性別</p>
                         
-                            <input type="radio" id="male" class="radio" name="user_gender" value="man" checked>
+                            <input type="radio" id="male" class="radio_btn" name="user_gender" value="man" checked>
                             <label for="male">男性</label>
 
-                            <input type="radio" id="female" class="radio" name="user_gender" value="woman" >
+                            <input type="radio" id="female" class="radio_btn" name="user_gender" value="woman" >
                             <label for="female">女性</label>
                         
-                            <input type="radio" id="other" class="radio" name="user_gender" value="other" >
+                            <input type="radio" id="other" class="radio_btn" name="user_gender" value="other" >
                             <label for="other">その他</label>
                     </div>
 
@@ -119,14 +119,12 @@
                             <option value="">SBS</option>
                             <option value="">SMS</option>
                         </select>
-                        <input type="text" class="sns" name="user_sns_other" placeholder="SNSのIDを入力してください。">
+                        <input type="text" class="sns" name="user_sns_id" placeholder="SNSのIDを入力してください。">
                     </div>
-                    
                     <div class="submit_btn">
                         <input type="submit" class="submit" name="send" value="確認">
                     </div>
                 </form>
-               
         </div>
         <footer>
             <div class="footer__container">
