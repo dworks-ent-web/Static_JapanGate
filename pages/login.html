@@ -6,32 +6,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ログイン｜JapanGate</title>
     <link rel="stylesheet" href="/assets/css/common.min.css">
+
+    <!----Googlefont -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="container header__container">
-            <nav class="header__nav"></nav>
-            <img src="../assets/img/common/jpgate_logo.png" alt="JapanGateロゴマーク">
-            <div class="header__lang"></div>
+            <div id="nav-wrapper" class="nav-wrapper">
+                <div class="hamburger" id="js-hamburger">
+                  <span class="hamburger__line hamburger__line--1"></span>
+                  <span class="hamburger__line hamburger__line--2"></span>
+                  <span class="hamburger__line hamburger__line--3"></span>
+                </div>
+                <nav class="sp-nav">
+                    <ul>
+                        <li><a href="#">新規登録</a></li>
+                        <li><a href="#">ログイン</a></li>
+                        <li><a href="#">マイページ</a></li>
+                    </ul>
+                    <ul>日本に行く
+                        <li><a href="">日本に行くためには</a></li>
+                        <li><a href="">在留資格の種類</a></li>
+                        <li><a href="">在留資格/査証(VISA)取得の手続</a></li>
+                    </ul>
+                    <ul>日本で暮らす
+                        <li><a href="">家を探す</a></li>
+                        <li><a href="">日本で暮らすために必要な手続</a></li>
+                        <li><a href="">その他</a></li>
+                    </ul>
+                    <ul>日本で働く
+                        <li><a href="">働く資格の特徴</a></li>
+                        <li><a href="">仕事を探す</a></li>
+                        <li><a href="">その他</a></li>
+                    </ul>
+                    <ul>日本で学ぶ
+                        <li><a href="">留学の資格について</a></li>
+                        <li><a href="">日本の学校の特徴</a></li>
+                        <li><a href="">その他</a></li>
+                    </ul>
+                    <ul>スキルを磨く
+                        <li><ul>日本語を学ぶ
+                              <li>
+                                  <ul>動画コンテンツ
+                                      <li><a href="">初級</a></li>
+                                      <li><a href="">中級</a></li>
+                                      <li><a href="">技能実習生向け</a></li>
+                                      <li><a href="">特定技能向け</a></li>
+                                  </ul>
+                              </li>
+                              <li>教材紹介</li>
+                    </ul>
+                       </li>
+                      <li>
+                          <ul>特定技能を学ぶ
+                              <li><a href="">動画コンテンツ</a></li>
+                              <li><a href="">教材紹介</a></li>
+                              <li><a href="">過去の試験問題</a></li>
+                          </ul>
+                      </li>
+                    </ul>
+                    <ul>お知らせ
+                        <li><a href="">ニュース</a></li>
+                        <li><a href="">更新情報</a></li>
+                        <li><a href="">キャンペーン</a></li>
+                    </ul>
+                   <ul>
+                       <li><a href="">よくある質問</a></li>
+                   </ul>
+                </nav>
+                <div class="black-bg" id="js-black-bg"></div>
+               </div>
+
+            <img class="header__logo" src="/assets/img/common/jpgate_logo.png" alt="JapanGateロゴマーク">
+            <ul class="header__lang">
+                <li><a href="">日本語</a></li>
+                <li><a href="">英語</a></li>
+                <li><a href="">中国語（繁体字）</a></li>
+                <li><a href="">中国語（簡体字）</a></li>
+            </ul>
         </div>
     </header>
     <main>
         <section class="title">
             <div class="inner">
-                <nav class="main__pkz"></nav>
+                <div class="nav__pkz">
+                    <p>
+                        <a href="">トップページ</a>
+                        >  ログイン
+                    </p>
+                </div>
                 <h1 class="title">
-                    <img src="../assets/img/login/title_login.png" alt="ログイン">
+                    <img src="/assets/img/login/title_login.png" alt="ログイン">
                 </h1>
             </div>
         </section>
             <div class="container">
-                <form name="" method="post" action="">
-                    <div class="icon"></div>
-                        <input type="text" name="user_name" id="address" placeholder="メールアドレスを入力してください">
-                    <div class="icon"></div>
-                        <input type="password" name="pass" id="pass" placeholder="パスワードを入力してください">
-                        <input type="submit" value="ログイン">
-                </form>
+                <div id="login">
+                    <form name='form-login'>
+                      <div class="icon__space">
+                          <img src="/assets/img/login/mailaddress_icon.png" alt="メールアドレスアイコン">
+                      </div>
+                        <input type="text" id="mailaddress" placeholder="メールアドレスを入力してください">
+                     
+                        <div class="icon__space">
+                            <img src="/assets/img/login/password_icon.png" alt="パスワードアイコン">
+                        </div>
+                        <input type="password" id="pass" placeholder="パスワードを入力してください">
+                      
+                      <input type="submit" value="ログイン">
+              
+              </form>
+              </div>
                 <p>--または--</p>
                 <div class="google__login"></div>
             </div>
@@ -43,11 +131,34 @@
         <div class="container footer__container">
             <dl>
                 <dt>How to use</dt>
-                    <dd>
-                        <a href="">初めての方へ</a>
-                </dd>
+                    <dd><a href="">初めての方へ</a></dd>
+                    <dd><a href="">新規登録</a></dd>
+                    <dd><a href="">JapanGateとは</a></dd>
+                <dt>Service</dt>
+                    <dd><a href=""></a>coming soon</a></dd>
+                    <dt>News</dt>
+                    <dd><a href="">新着情報</a></dd>
+                    <dd><a href="">お知らせ</a></dd>
+                    <dt>Support</dt>
+                    <dd><a href="">新着情報</a></dd>
+                    <dd><a href="">お知らせ</a></dd>
+                    <dd><a href="">よくある質問</a></dd>
+                    <dd><a href="">プライバシー</a></dd>
+                    <dd><a href="">企業情報</a></dd>
             </dl>
         </div>
     </footer>
 </body>
+<script>window.onload = function () {
+    var nav = document.getElementById('nav-wrapper');
+    var hamburger = document.getElementById('js-hamburger');
+    var blackBg = document.getElementById('js-black-bg');
+
+    hamburger.addEventListener('click', function () {
+        nav.classList.toggle('open');
+    });
+    blackBg.addEventListener('click', function () {
+        nav.classList.remove('open');
+    });
+};</script>
 </html>
