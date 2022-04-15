@@ -46,22 +46,22 @@
 
                     <div class="section__input">
                         <p><span>必須</span>氏名 カナ</p>
-                        <input type="text" name="user_kana" id="userkana" placeholder="（例）ヤマダ　タロウ">
+                        <input type="text" name="user_kana" id="user_kana" placeholder="（例）ヤマダ　タロウ">
                         <span id="error_msg_username_kana" class="error_msg"></span>
                     </div>
 
                     <div class="section__input">
                         <p><span>必須</span>メールアドレス</p>
-                        <input type="text" name="user_email" placeholder="（例）japangate@mail.com">
+                        <input type="text" name="user_email" id="user_email" placeholder="（例）japangate@mail.com">
                     </div>
 
                     <div class="section__input">
                         <p><span>必須</span>パスワード</p>
-                        <input type="text" name="user_password" placeholder="12文字以上で入力してください">
+                        <input type="text" name="user_password" id="user_password" placeholder="12文字以上で入力してください">
                     </div>
                     <div class="section__input">
                         <p><span>必須</span>パスワード確認</p>
-                        <input type="text" name="user_password_check" placeholder="再度パスワードを入力してください">
+                        <input type="text" name="user_password_check" id="user_password_check" placeholder="再度パスワードを入力してください">
                     </div>
                     
                     <div class="section__input">
@@ -117,18 +117,18 @@
 
                     <div class="section__input">
                         <p>LINE</p>
-                        <input type="text" name="user_sns_line" placeholder="LINEIDを入力してください">
+                        <input type="text" name="user_sns_line" id="user_sns_line" placeholder="LINEIDを入力してください">
                     </div>
 
                     <div class="section__input">
                         <p>Facebook</p>
-                        <input type="text" name="user_sns_facebook" placeholder="ユーザーIDを入力してください">
+                        <input type="text" name="user_sns_facebook" id="user_sns_facebook" placeholder="ユーザーIDを入力してください">
                     </div>
 
                     <div class="section__input">
                         <p>その他SNS</p>
-                        <input type="text" class="sns" name="user_sns_id['type']" placeholder="SNS名を入力してください">
-                        <input type="text" class="sns" name="user_sns_id['value']" placeholder="SNSのIDを入力してください">
+                        <input type="text" class="sns" name="user_sns_id['type']" id="user_sns_id['type']" placeholder="SNS名を入力してください">
+                        <input type="text" class="sns" name="user_sns_id['value']" id="user_sns_id['value']" placeholder="SNSのIDを入力してください">
                     </div>
                     <div class="submit_btn">
                         <input type="submit" class="submit" id="register_input_submit" name="register_input_submit" value="確認">
@@ -190,6 +190,15 @@
             }
             return true;
         };
+        // ユーザー名カナ空欄チェック 
+        function user_input_kana_check(){
+            const user_kana = $("#user_kana").val();
+
+            if(user_kana.length == 0){
+                return false;
+            }
+            return true;
+        };
         // 送信内容チェック
         function error_check(){
             let user_flag = false;
@@ -202,8 +211,18 @@
             }else{
                 $("#error_msg_username").html("");
                 $("#user_name").removeClass("input_form_error");
-                user_flag = true;
+                
             }
+
+            if(!user_input_kana_check()){
+               
+               $("#error_msg_username_kana").html("氏名（カナ）が入力されていません");
+               $("#user_kana").addClass("input_form_error");
+           }else{
+               $("#error_msg_username_kana").html("");
+               $("#user_kana").removeClass("input_form_error");
+               
+           }
 
             
             // エラーメッセージ無い時に、SUBMITする
