@@ -76,7 +76,7 @@
 
                     <div class="section__input">
                         <p><span>必須</span>国籍</p>
-                        <select name="" id="">
+                        <select name="" id="" name="user_natl">
                             <option value="" disabled selected style="display:none;">国籍を選択してください。</option>
                             <option value="">Japan</option>
                             <option value="">England</option>
@@ -86,7 +86,7 @@
 
                     <div class="section__input">
                         <p><span>必須</span>居住地（国）</p>
-                        <select name="" id="">
+                        <select name="" id="" name="user_address_cntry">
                             <option value="" disabled selected style="display:none;">居住地を選択してください。</option>
                             <option value="">Japan</option>
                             <option value="">England</option>
@@ -111,7 +111,7 @@
 
                     <div class="section__input">
                         <p>その他SNS</p>
-                        <select class="sns_select" name="" id="">
+                        <select class="sns_select" name="user_sns_other" id="">
                             <option value="" disabled selected style="display:none;">SNSを選択してください。</option>
                             <option value="">SNS</option>
                             <option value="">SBS</option>
