@@ -40,13 +40,14 @@
 
                     <div class="section__input">
                         <p><span>必須</span>氏名</p>
-                        <input type="text" name="user_name" id="username" placeholder="（例）山田　太郎">
+                        <input type="text" name="user_name" id="user_name" placeholder="（例）山田　太郎">
                         <span id="error_msg_username" class="error_msg"></span>
                     </div>
 
                     <div class="section__input">
                         <p><span>必須</span>氏名 カナ</p>
-                        <input type="text" name="user_kana" placeholder="（例）ヤマダ　タロウ">
+                        <input type="text" name="user_kana" id="userkana" placeholder="（例）ヤマダ　タロウ">
+                        <span id="error_msg_username_kana" class="error_msg"></span>
                     </div>
 
                     <div class="section__input">
@@ -182,8 +183,9 @@
     <script>
             // ユーザー名空欄チェック 
         function user_input_check(){
-            const username = $("#username").val();
-            if(username.length == 0){
+            const user_name = $("#user_name").val();
+
+            if(user_name.length == 0){
                 return false;
             }
             return true;
@@ -195,17 +197,13 @@
             // ユーザー名チェック
             if(!user_input_check()){
                
-                $("#error_msg_username").html("ユーザー名入力してください。");
-                $("#username").addClass("input_form_error");
+                $("#error_msg_username").html("氏名が入力されていません");
+                $("#user_name").addClass("input_form_error");
             }else{
                 $("#error_msg_username").html("");
-                $("#username").removeClass("input_form_error");
+                $("#user_name").removeClass("input_form_error");
                 user_flag = true;
             }
-
-
-
-
 
             
             // エラーメッセージ無い時に、SUBMITする

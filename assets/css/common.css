@@ -309,12 +309,26 @@ main .main_contents form .section__input p span {
   margin-right: 6px;
 }
 
+main .main_contents form .section__input span {
+  font-size: 12px;
+  color: #e86d99;
+  font-weight: 500;
+}
+
 main .main_contents form .section__input .sns {
   margin-bottom: 10px;
 }
 
 main .main_contents form .section__input .sns_select {
   margin-bottom: 10px;
+}
+
+main .main_contents form .section__input--pref {
+  display: none;
+}
+
+main .main_contents form .section__input--pref.active {
+  display: block;
 }
 
 main .main_contents form input {
@@ -399,5 +413,9 @@ main .main_contents form select {
   border: 0.5px solid #dbdbdb;
   padding-left: 10px;
   color: #555555;
+}
+
+main .main_contents form .input_form_error {
+  background-color: #ffdbe8;
 }
 /*# sourceMappingURL=common.css.map */
