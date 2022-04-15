@@ -1,10 +1,11 @@
 //文字コードはutf-8
 @charset "UTF-8";
-@import "_setting/variables";
-@import "_setting/mixin";
-@import "_common/reset";
-@import "_common/base";
-@import "_common/header";
-@import "_common/footer";
-@import "_page/login";
-@import "_page/top";
+@import "_setting/_variables";
+@import "_setting/_mixin";
+@import "_common/_reset";
+@import "_common/_base";
+@import "_common/_header";
+@import "_common/_footer";
+@import "_page/_login";
+@import "_page/_top";
+@import "_page/_register";
