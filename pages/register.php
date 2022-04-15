@@ -119,28 +119,7 @@
                         </select>
                         <input type="text" class="sns" name="user_sns_other" placeholder="SNSのIDを入力してください。">
                     </div>
-
-                    <div class="section__input">
-                        <p>関心項目選択（複数選択可）</p>
-                        <div class="check">
-                            <input type="checkbox" class="checkbox" name="">項目1
-                        </div>
-                        <div class="check">
-                            <input type="checkbox" class="checkbox" name="">項目2
-                        </div>
-                        <div class="check">
-                            <input type="checkbox" class="checkbox" name="">項目3
-                        </div>
-                        <div class="check">
-                            <input type="checkbox" class="checkbox" name="">項目4
-                        </div>
-                        <div class="check">
-                            <input type="checkbox" class="checkbox" name="">項目5
-                        </div>
-                        <div class="check">
-                            <input type="checkbox" class="checkbox" name="">項目6
-                        </div>
-                    </div>
+                    
                     <div class="submit_btn">
                         <input type="submit" class="submit" name="send" value="確認">
                     </div>
