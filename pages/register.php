@@ -41,6 +41,7 @@
                     <div class="section__input">
                         <p><span>必須</span>氏名</p>
                         <input type="text" name="user_name" placeholder="（例）山田　太郎">
+                        <span id="error_msg_username" class="error_msg"></span>
                     </div>
 
                     <div class="section__input">
@@ -55,7 +56,11 @@
 
                     <div class="section__input">
                         <p><span>必須</span>パスワード</p>
-                        <input type="text" name="user_password" placeholder="（例）半角英数字で記入してください。">
+                        <input type="text" name="user_password" placeholder="12文字以上で入力してください">
+                    </div>
+                    <div class="section__input">
+                        <p><span>必須</span>パスワード確認</p>
+                        <input type="text" name="user_password_check" placeholder="再度パスワードを入力してください">
                     </div>
                     
                     <div class="section__input">
@@ -79,7 +84,7 @@
                     <div class="section__input">
                         <p><span>必須</span>国籍</p>
                         <select name="" id="" name="user_natl">
-                            <option value="" disabled selected style="display:none;">国籍を選択してください。</option>
+                            <option value="" disabled selected style="display:none;">国籍を選択してください</option>
                             <option value="">Japan</option>
                             <option value="">England</option>
                             <option value="">Russia</option>
@@ -89,7 +94,7 @@
                     <div class="section__input">
                         <p><span>必須</span>居住地（国）</p>
                         <select name="" id="" name="user_address_cntry">
-                            <option value="" disabled selected style="display:none;">居住地を選択してください。</option>
+                            <option value="" disabled selected style="display:none;">居住地を選択してください</option>
                             <option value="">Japan</option>
                             <option value="">England</option>
                             <option value="">Russia</option>
@@ -98,77 +103,168 @@
 
                     <div class="section__input">
                         <p>居住地</p>
-                        <input type="text" name="user_address_pref" placeholder="居住地を選択してください。">
+                        <select name="" id="" name="user_address_cntry">
+                            <option value="" disabled selected style="display:none;">居住地を選択してください</option>
+                            <option value="">Japan</option>
+                            <option value="">England</option>
+                            <option value="">Russia</option>
+                        </select>
                     </div>
 
                     <div class="section__input">
                         <p>LINE</p>
-                        <input type="text" name="user_sns_line" placeholder="LINEIDを入力してください。">
+                        <input type="text" name="user_sns_line" placeholder="LINEIDを入力してください">
                     </div>
 
                     <div class="section__input">
                         <p>Facebook</p>
-                        <input type="text" name="user_sns_facebook" placeholder="ユーザーIDを入力してください。">
+                        <input type="text" name="user_sns_facebook" placeholder="ユーザーIDを入力してください">
                     </div>
 
                     <div class="section__input">
                         <p>その他SNS</p>
-                        <select class="sns_select" name="user_sns_other" id="">
-                            <option value="" disabled selected style="display:none;">SNSを選択してください。</option>
-                            <option value="">SNS</option>
-                            <option value="">SBS</option>
-                            <option value="">SMS</option>
-                        </select>
-                        <input type="text" class="sns" name="user_sns_id" placeholder="SNSのIDを入力してください。">
+                        <input type="text" class="sns" name="user_sns_id['type']" placeholder="SNS名を入力してください">
+                        <input type="text" class="sns" name="user_sns_id['value']" placeholder="SNSのIDを入力してください">
                     </div>
                     <div class="submit_btn">
-                        <input type="submit" class="submit" name="send" value="確認">
+                        <input type="submit" class="submit" id="register_input_submit" name="register_input_submit" value="確認">
                     </div>
                 </form>
         </div>
     </main>
     <footer>
-            <div class="footer__container">
-               <div class="usage">
-                    <ul>
-                        <li class="font_big">How to use</li>
-                    </ul>
-                    <ul>
-                        <li class="right"><a href="">初めての方へ</a></li>
-                        <li class="right"><a href="">新規登録</a></li>
-                        <li class="right"><a href="">Japan Gateとは</a></li>
-                    </ul>
-               </div>
-               <div class="service">
-                    <ul>
-                        <li class="font_big">Service</li>
-                    </ul>
-                    <ul>
-                        <li class="right">coming soon</li>
-                    </ul>
-               </div>
-               <div class="news">
-                    <ul>
-                        <li class="font_big">News</li>
-                    </ul>
-                    <ul>
-                        <li class="right"><a href="">新着情報</a></li>
-                        <li class="right"><a href="">お知らせ</a></li>
-                    </ul>
-               </div>
-               <div class="support">
-                    <ul>
-                        <li class="font_big">Support</li>
-                    </ul>
-                    <ul>
-                        <li class="right"><a href="">新着情報</a></li>
-                        <li class="right"><a href="">お知らせ</a></li>
-                        <li class="right"><a href="">よくある質問</a></li>
-                        <li class="right"><a href="">プライバシー</a></li>
-                        <li class="right"><a href="">企業情報</a></li>
-                    </ul>
-               </div>
+        <div class="footer__container">
+            <div class="usage">
+                <ul>
+                    <li class="font_big">How to use</li>
+                </ul>
+                <ul>
+                    <li class="right"><a href="">初めての方へ</a></li>
+                    <li class="right"><a href="">新規登録</a></li>
+                    <li class="right"><a href="">Japan Gateとは</a></li>
+                </ul>
             </div>
-        </footer>
+            <div class="service">
+                <ul>
+                    <li class="font_big">Service</li>
+                </ul>
+                <ul>
+                    <li class="right">coming soon</li>
+                </ul>
+            </div>
+            <div class="news">
+                <ul>
+                    <li class="font_big">News</li>
+                </ul>
+                <ul>
+                    <li class="right"><a href="">新着情報</a></li>
+                    <li class="right"><a href="">お知らせ</a></li>
+                </ul>
+            </div>
+            <div class="support">
+                <ul>
+                    <li class="font_big">Support</li>
+                </ul>
+                <ul>
+                    <li class="right"><a href="">新着情報</a></li>
+                    <li class="right"><a href="">お知らせ</a></li>
+                    <li class="right"><a href="">よくある質問</a></li>
+                    <li class="right"><a href="">プライバシー</a></li>
+                    <li class="right"><a href="">企業情報</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    
+        // （仮）サーバーエラーメッセージ
+        function btm_error(){
+            $("#error_text_bottom").html("エラーにより処理が実行されませんでした。<br>[サーバーサイドのエラーメッセージ]");
+        }
+        // 送信内容チェック
+        function error_check(){
+            let user_flag = false;
+            let check_flag = false;
+            let org_flag = false;
+            let mail_flag = false;
+            // ユーザー名チェック
+            if($("#username").val().length == 0){
+                $("#error_msg_username").html("ユーザー名入力してください。");
+                $("#username").addClass("input_form_error");
+            }else{
+                $("#error_msg_username").html("");
+                $("#username").removeClass("input_form_error");
+                user_flag = true;
+            }
+            // 権限チェック
+            if ($("#Viewer").prop('checked') || $("#Editor").prop('checked') || $("#Admin").prop('checked') ){
+                $("#error_msg_type").html("");
+                check_flag = true;
+            }else {
+                $("#error_msg_type").html("権限入力してください。");
+            }
+            // 組織チェック
+            if($("#belong").val().length == 0){
+                $("#error_msg_belong").html("所属組織を入力してください。");
+                $("#belong").addClass("input_form_error");
+            }else{
+                $("#error_msg_belong").html("");
+                $("#belong").removeClass("input_form_error");
+                org_flag = true;
+            }
+            // メールアドレスチェック
+            if($("#mail").val().length == 0){
+                $("#error_msg_mail").html("メールアドレスを入力してください。");
+                $("#mail").addClass("input_form_error");
+            }else{
+                if($("#mail").val().toUpperCase().match( /^[A-Z0-9._%+-/!#$%&'*=?^_`{|}~]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/g )){
+                    $("#error_msg_mail").html("");
+                    $("#mail").removeClass("input_form_error");
+                    mail_flag = true;
+                }else{
+                    $("#error_msg_mail").html("メールアドレスが入力規則に沿っていません。");
+                    $("#mail").addClass("input_form_error");
+                }
+            }
+
+            // エラーメッセージ無い時に、SUBMITする
+            if(user_flag && check_flag & org_flag & mail_flag){
+                // （仮）サーバーエラーメッセージ
+                btm_error();
+                // $('form').unbind('submit').submit();
+            }
+        }
+        $("#register_input_submit").on("click",() => {
+            // clickイベントの停止 
+            event.preventDefault();
+            error_check();
+        });
+    </script>
+<!-- <script>
+    $("#register_input_submit").on("click",(event) => {
+        // clickイベントの停止 
+        event.preventDefault();
+        let pass_flag = false;
+        
+        // ワンタイムパスワード空欄チェック
+        if(!pass_input_check()){
+            $("#error_msg_password").html("ワンタイムパスワードを入力してください。");
+            $("#password").addClass("input_form_error");
+        }else{
+            $("#error_msg_password").html("");
+            $("#password").removeClass("input_form_error");
+            pass_flag = true;
+        }
+
+        // エラーメッセージ無い時に、SUBMITする
+        if(pass_flag){
+            // （仮）サーバーエラーメッセージ
+            alert("submitする");
+            // btm_error();
+            // $('form').unbind('submit').submit();
+        }
+    });
+</script> -->
 </body>
 </html> 
