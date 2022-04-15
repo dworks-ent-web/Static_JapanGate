@@ -66,14 +66,17 @@
                     <div class="section__input">
                         <p><span>必須</span>性別</p>
                         
-                            <input type="radio" id="male" class="radio_btn" name="user_gender" value="man" checked>
+                            <input type="radio" id="male" class="radio_btn" name="user_gender" value= 1 checked>
                             <label for="male">男性</label>
 
-                            <input type="radio" id="female" class="radio_btn" name="user_gender" value="woman" >
+                            <input type="radio" id="female" class="radio_btn" name="user_gender" value= 2 >
                             <label for="female">女性</label>
                         
-                            <input type="radio" id="other" class="radio_btn" name="user_gender" value="other" >
+                            <input type="radio" id="other" class="radio_btn" name="user_gender" value= 3 >
                             <label for="other">その他</label>
+
+                            <input type="radio" id="unknown" class="radio_btn" name="user_gender" value= 4 >
+                            <label for="other">回答しない</label>
                     </div>
 
                     <div class="section__input">

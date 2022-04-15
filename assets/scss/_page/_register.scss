@@ -71,7 +71,13 @@ main{
                     font-size: 10px;
                     margin-right: 6px;
                 }
-             
+                .error_msg{
+                    background-color: #efefef;
+                    color: black;
+                    position: absolute;
+                    top: 275px;
+                    left: 20px;
+                }
                 p{
                     font-size: 14px;
                     color: #555555;
