@@ -291,7 +291,14 @@ main .main_contents form .section__input {
   margin-top: 20px;
 }
 
-main .main_contents form .section__input span {
+main .main_contents form .section__input p {
+  font-size: 14px;
+  color: #555555;
+  font-weight: 500;
+  margin: 25px 0 12px;
+}
+
+main .main_contents form .section__input p span {
   width: 28px;
   height: 17px;
   border-radius: 4px;
@@ -300,13 +307,6 @@ main .main_contents form .section__input span {
   padding: 4px;
   font-size: 10px;
   margin-right: 6px;
-}
-
-main .main_contents form .section__input p {
-  font-size: 14px;
-  color: #555555;
-  font-weight: 500;
-  margin: 25px 0 12px;
 }
 
 main .main_contents form .section__input .sns {

@@ -36,11 +36,11 @@
 
         <div class="main_contents">
             
-                <form method="post" action="" name="signup_input_submit">
+                <form method="post" action="" name="">
 
                     <div class="section__input">
                         <p><span>必須</span>氏名</p>
-                        <input type="text" name="user_name" placeholder="（例）山田　太郎">
+                        <input type="text" name="user_name" id="username" placeholder="（例）山田　太郎">
                         <span id="error_msg_username" class="error_msg"></span>
                     </div>
 
@@ -180,25 +180,40 @@
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-    
-        // （仮）サーバーエラーメッセージ
-        function btm_error(){
-            $("#error_text_bottom").html("エラーにより処理が実行されませんでした。<br>[サーバーサイドのエラーメッセージ]");
-        }
+            // ユーザー名空欄チェック 
+        function user_input_check(){
+            const username = $("#username").val();
+            if(username.length == 0){
+                return false;
+            }
+            return true;
+        };
         // 送信内容チェック
         function error_check(){
             let user_flag = false;
-            let check_flag = false;
-            let org_flag = false;
-            let mail_flag = false;
+
             // ユーザー名チェック
-            if($("#username").val().length == 0){
+            if(!user_input_check()){
+               
                 $("#error_msg_username").html("ユーザー名入力してください。");
                 $("#username").addClass("input_form_error");
             }else{
                 $("#error_msg_username").html("");
                 $("#username").removeClass("input_form_error");
                 user_flag = true;
+            }
+
+
+
+
+
+            
+            // エラーメッセージ無い時に、SUBMITする
+            if(user_flag){
+                // （仮）サーバーエラーメッセージ
+                alert("submitする");
+                // btm_error();
+                // $('form').unbind('submit').submit();
             }
         }
         $("#register_input_submit").on("click",() => {

@@ -61,28 +61,23 @@ main{
                 width: 100%;
                 margin: 0 auto;
                 margin-top: 20px;
-                span{
-                    width: 28px;
-                    height: 17px;
-                    border-radius: 4px;
-                    background-color: #e86d99;
-                    color: white;
-                    padding: 4px;
-                    font-size: 10px;
-                    margin-right: 6px;
-                }
-                .error_msg{
-                    background-color: white;
-                    position: absolute;
-                    top: 273px;
-                    left: 20px;
-                }
                 p{
                     font-size: 14px;
                     color: #555555;
                     font-weight: 500;
                     margin: 25px 0 12px;
+                    span{
+                        width: 28px;
+                        height: 17px;
+                        border-radius: 4px;
+                        background-color: #e86d99;
+                        color: white;
+                        padding: 4px;
+                        font-size: 10px;
+                        margin-right: 6px;
+                    }
                 }
+            
                 .sns{
                     margin-bottom: 10px;
                 }
