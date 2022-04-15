@@ -66,16 +66,16 @@
                     <div class="section__input">
                         <p><span>必須</span>性別</p>
                         
-                            <input type="radio" id="male" class="radio_btn" name="user_gender" value= 1 checked>
+                            <input type="radio" id="male" class="radio_btn" name="user_gender" value="1" checked>
                             <label for="male">男性</label>
 
-                            <input type="radio" id="female" class="radio_btn" name="user_gender" value= 2 >
+                            <input type="radio" id="female" class="radio_btn" name="user_gender" value="2">
                             <label for="female">女性</label>
                         
-                            <input type="radio" id="other" class="radio_btn" name="user_gender" value= 3 >
+                            <input type="radio" id="other" class="radio_btn" name="user_gender" value="3">
                             <label for="other">その他</label>
 
-                            <input type="radio" id="unknown" class="radio_btn" name="user_gender" value= 4 >
+                            <input type="radio" id="unknown" class="radio_btn" name="user_gender" value="4">
                             <label for="other">回答しない</label>
                     </div>
 
@@ -199,43 +199,6 @@
                 $("#error_msg_username").html("");
                 $("#username").removeClass("input_form_error");
                 user_flag = true;
-            }
-            // 権限チェック
-            if ($("#Viewer").prop('checked') || $("#Editor").prop('checked') || $("#Admin").prop('checked') ){
-                $("#error_msg_type").html("");
-                check_flag = true;
-            }else {
-                $("#error_msg_type").html("権限入力してください。");
-            }
-            // 組織チェック
-            if($("#belong").val().length == 0){
-                $("#error_msg_belong").html("所属組織を入力してください。");
-                $("#belong").addClass("input_form_error");
-            }else{
-                $("#error_msg_belong").html("");
-                $("#belong").removeClass("input_form_error");
-                org_flag = true;
-            }
-            // メールアドレスチェック
-            if($("#mail").val().length == 0){
-                $("#error_msg_mail").html("メールアドレスを入力してください。");
-                $("#mail").addClass("input_form_error");
-            }else{
-                if($("#mail").val().toUpperCase().match( /^[A-Z0-9._%+-/!#$%&'*=?^_`{|}~]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/g )){
-                    $("#error_msg_mail").html("");
-                    $("#mail").removeClass("input_form_error");
-                    mail_flag = true;
-                }else{
-                    $("#error_msg_mail").html("メールアドレスが入力規則に沿っていません。");
-                    $("#mail").addClass("input_form_error");
-                }
-            }
-
-            // エラーメッセージ無い時に、SUBMITする
-            if(user_flag && check_flag & org_flag & mail_flag){
-                // （仮）サーバーエラーメッセージ
-                btm_error();
-                // $('form').unbind('submit').submit();
             }
         }
         $("#register_input_submit").on("click",() => {
