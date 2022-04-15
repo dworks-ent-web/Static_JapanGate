@@ -17,7 +17,8 @@
         </div>
     </header> -->
     <main class="main">
-        <div class="top">
+
+        <div class="main_top">
             <div class="top_contents">
                 <p><a href="">TOPページ></a>新規登録</p>
             </div>
@@ -32,7 +33,8 @@
                 </figure>
             </div>
         </div>
-        <div class="contents">
+
+        <div class="main_contents">
             
                 <form method="post" action="" name="signup_input_submit">
 
@@ -71,7 +73,7 @@
 
                     <div class="section__input">
                         <p><span>必須</span>生年月日</p>
-                        <input type="date" name="user_birth" placeholder="年/月/日">
+                        <input type="date" name="user_birth">
                     </div>
 
                     <div class="section__input">
