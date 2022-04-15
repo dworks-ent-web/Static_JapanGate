@@ -126,7 +126,8 @@
                     </div>
                 </form>
         </div>
-        <footer>
+    </main>
+    <footer>
             <div class="footer__container">
                <div class="usage">
                     <ul>
@@ -169,6 +170,5 @@
                </div>
             </div>
         </footer>
-    </main>
 </body>
 </html> 
