@@ -22,9 +22,8 @@ main{
         .top_contents{
             display: flex;
             align-items: center;
-            width: 280px;
-            height: 150px;
-            margin: 0 auto;
+            width: 100%;
+            margin-left: 20px;
             a{
                 color: #555555;
             }
@@ -36,6 +35,7 @@ main{
             }
         }
         .sakura{
+            width: 100%;
             position: absolute;
             top: 128px;
         }
@@ -52,21 +52,23 @@ main{
         font-family: "Noto Sans CJ Kjp";
     
         form{
+            
             margin: 0 auto;
+            padding: 0 20px;
             .section__input__radio{
                 display: flex;
             }
             .section__input{
-                width: 280px;
+                width: 100%;
                 margin: 0 auto;
                 margin-top: 20px;
                 span{
                     width: 28px;
                     height: 17px;
-                    border-radius: 2px;
+                    border-radius: 4px;
                     background-color: #e86d99;
                     color: white;
-                    padding: 2px;
+                    padding: 4px;
                     font-size: 10px;
                     margin-right: 6px;
                 }
@@ -74,7 +76,7 @@ main{
                     font-size: 14px;
                     color: #555555;
                     font-weight: 500;
-                    margin: 20px 0;
+                    margin: 25px 0 12px;
                 }
                 .sns{
                     margin-bottom: 10px;
@@ -85,13 +87,13 @@ main{
             }
             input{
                 font-size: 12px;
-                width: 280px;
+                width: 100%;
                 height: 30px;
                 border-radius: 5px;
                 background-color: #f3f3f3;
                 border: 0.5px solid #dbdbdb;
                 padding-left: 10px;
-                cursor:text;
+                cursor: text;
             }
             .radio_btn{
                 width: 9px;
@@ -133,18 +135,19 @@ main{
                     color: #ffffff;
                     font-weight: bold;
                     cursor: pointer;
+                    padding: 0;
                 }
             }
             select{
                 -webkit-appearance: listbox !important;
                 font-size: 12px;
-                width: 280px;
+                width: 100%;
                 height: 30px;
                 border-radius: 5px;
                 background-color: #f3f3f3;
                 border: 0.5px solid #dbdbdb;
                 padding-left: 10px;
-                color: #555555; 
+                color: #555555;
             }
         }
     }
@@ -154,7 +157,7 @@ main{
         display: flex;
         justify-content: center;
         .footer__container{
-            width: 280px;
+            width: calc( 100% - 40px);
             height: 443px;
             background-color: #2a1f55;
             padding-top: 20px;
