@@ -20,6 +20,12 @@
             <div class="top_contents">
                 <p><a href="">TOPページ></a>新規登録</p>
             </div>
+            <div class="sakura">
+                <img src="/assets/img/common/sakura_line.png">
+            </div>
+            <div class="title">
+            <img src="/assets/img/register/title_register.png">
+            </div>
         </div>
         <div class="contents">
             
@@ -50,7 +56,7 @@
                         
                             <input type="radio" id="male" class="radio" name="user_gender" value="man" checked>
                             <label for="male">男性</label>
-                    
+
                             <input type="radio" id="female" class="radio" name="user_gender" value="woman" >
                             <label for="female">女性</label>
                         
