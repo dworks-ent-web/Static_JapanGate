@@ -11,10 +11,331 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        text-decoration: none;
+        line-height: 2em;;
+    }
+    header{
+        position: fixed;
+        top:0;
+        width: 100%;
+    height: 56px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.7);
+    }
+header div.container{
+   position:relative;
+        max-width: calc(100% - 20px);
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 20px;
+    align-items: center;
+}
+header div.container img{
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+header div.container div#nav-wrapper{
+    width: 30px;
+    height: 30px;
+}
+header div.container .hamburger{
+    position: fixed;
+   left: 20px;
+          width: 30px;
+          height: 30px;
+          cursor: pointer;
+          z-index: 300;
+        }
+header div.container .hamburger .hamburger__line{
+              position: absolute;
+              width: 30px;
+              height: 3px;
+              right: 0;
+              background-color: #027ABB;
+              transition: all 0.5s;
+            }
+header div.container .hamburger .hamburger__line--1{
+    top: 3px;
+}
+header div.container .hamburger .hamburger__line--2{
+    top: 12.25px;
+}
+header div.container .hamburger .hamburger__line--3{
+    top: 22.25px;
+}
+  /*ハンバーガーがクリックされたら*/
+  .open .hamburger__line--1 {
+              transform: rotate(-45deg);
+              top: 11px;
+        }
+  
+        .open .hamburger__line--2 {
+              opacity: 0;
+        }
+  
+        .open .hamburger__line--3 {
+              transform: rotate(45deg);
+              top: 11px;
+          }
+          /* 
+        sp-nav(ナビ)
+        =================================== */
+        .sp-nav{
+            position: fixed;
+            left: -100%; /*ハンバーガーがクリックされる前はWindow右側に隠す*/
+            top: 0;
+            width: 260px; /* 出てくるスライドメニューの幅 */
+            height: 100vh;
+            background-color: #fff;
+            transition: all 0.5s;
+            z-index: 200;
+            overflow-y: auto; /* メニューが多くなったらスクロールできるように */
+          }
+  
+          /*ハンバーガーがクリックされたら右からスライド*/
+.open .sp-nav {
+            left: 0;
+          }
+header .sp-nav ul li{
+    box-sizing: border-box;
+      width: 100%;
+    font-size : 14px;
+    padding: 1em;
+  background-color: #fff;
+  border-bottom:#027ABB 1px solid;
+  }
+ 
+  header .sp-nav ul li:first-child{ /*見出し*/
+      box-sizing: border-box;
+      width: 100%;
+    font-size : 14px;
+    font-weight: bold;
+    padding: 1em;
+  color : #fff;
+  background-color: #027ABB;
+  border-bottom: 1px solid #fff;
+  }
+header .sp-nav ul:first-of-type{
+    background-color: #FFFFFF;
+              margin:0 auto;
+          }
+header .sp-nav ul:first-child li{
+      box-sizing: border-box;
+      width: calc(100% - 20px);
+      height: auto;
+      padding: 1em;
+      margin:16px auto;
+      text-align: center;
+      background-color: #c4c4c4;
+      border-radius: 100px;
+      border: none;
+  }
+  header .sp-nav ul li a{
+  color : #027ABB;
+  }
+  header .sp-nav ul:nth-child(6) li + li{
+      padding: 0;
+  }
+  header .sp-nav ul:nth-child(6) li ul.list2,
+  ul.list3{
+      margin: auto 0;
+  }
+/*日本語を学ぶ*/
+header .sp-nav ul:nth-child(6) li ul.list2 li:first-child{
+background-color: #fff;
+color: #027ABB;
+padding: 1em;
+box-sizing: border-box;
+border-bottom: 1px solid #027ABB;
+border-radius: 0;
+width: 260px;
+margin: 0;
+display: block;
+text-align: left;
+}
+header .sp-nav ul:nth-child(6) li ul.list2 li + li{
+    padding: 0;
+    text-align: left;
+}
+header .sp-nav ul li ul.list2 li ul.list3 li a{
+    width:260px;
+}
+header .sp-nav ul:nth-child(6) li ul.list2 li ul.list3 li + li{
+    padding: 1em;
+}
+          /* 
+          black-bg(ハンバーガーメニュー解除用bg)
+          =================================== */
+          .black-bg {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 5;
+            background-color: #000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.5s;
+            cursor: pointer;
+            z-index: 100;
+          }
+  
+          /*ハンバーガーメニューが開いたら表示*/
+.open .black-bg {
+            opacity: 0.3;
+            visibility: visible;
+          }
+.container__lang li{
+              color: #333;
+            }
+.container__lang li.none{
+                display: none;
+            }
+.container__lang li.none a{
+                  display: none;
+                }
+              
+.container__lang li a{
+                color: #333;
+              }
+
+main{
+    margin-top: 55px;
+}
+main section.title{
+    background: url(/assets/img/common/bg_yagasuri_blue.png);
+    height: 86px;
+}
+main section.title::after{
+    content: url(/assets/img/common/sakura_line.png);
+    width: 100%;
+    position: absolute;
+    top: 115px;
+    z-index: 1;
+}
+main section div.inner{
+    margin: 0 20px;
+}
+main section div.inner div.nav__pkz{
+    padding-top: 5px;
+    font-size : 10px;
+  color : #555555;
+}
+main section div.inner h1.title{
+    margin: 0 auto;
+    text-align: center;
+}
+main section div.inner h1.title img{
+    width: auto;
+}
+
+main div.container{
+    background-color:#EDF7FC;
+    padding: 16px 5px;
+    width: calc(100% - 20px);
+    margin: 32px auto;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+
+}
+main div.container div#login form div.inner{
+    display: grid;
+    grid-template-columns: 45px 218px;
+}
+main div.container div#login form div.inner div.icon__space{
+    background-color: #027ABB;
+    border-radius: 5px 0 0 5px;
+    width: 45px;
+    height: 45px;
+}
+main div.container div#login form div.inner div.icon__space img{
+    width: auto;
+    height:auto;
+    box-sizing: border-box;
+    padding: 10px;
+}
+main div.container div#login form div.inner input.login__text{
+    border: 0.5px solid #c1c1c1;
+    border-radius: 0 5px 5px 0;
+    font-size: 12px;
+    color: #c1c1c1;
+}
+main div.container div#login + p{
+  font-size : 12px;
+  color : #555555;
+}
+main div.container div#login form input.submit{
+    display: block;
+    width: 132px;
+    height: 30px;
+    margin: 8px auto;
+    padding: 8px auto;
+    border: none;
+    background-color: #037ABC;
+  font-size : 13px;
+  color : #FFFFFF;
+  border-radius: 5px;
+}
+main div.container + p{
+    text-align: center;
+    margin:16px auto 40px;
+}
+main div.container + p a{
+    color: #037ABC;
+    text-decoration: underline;
+}
+footer{
+    background-color: #2A1F55;
+    width: 100%;
+}
+footer div.container dl{
+    width: 280px;
+    margin: 0 auto;
+    padding: 32px 0 40px;
+}
+footer div.container dl dt{
+    float: left;
+  font-weight : bold;
+  font-size : 16px;
+  color : #FFFFFF;
+  width: 40%;
+  margin-top: 2em;
+}
+footer div.container dl dt:first-child{
+    margin-top: 0px;
+}
+footer div.container dl dt + dd{
+    margin-top: 2em;
+}
+footer div.container dl dt + dd:first-of-type{
+    margin-top: 0;
+}
+footer div.container dl dd{
+    clear: right;
+    margin-inline-start: 9em;
+}
+footer div.container dl dd a{
+    font-size : 14px;
+  color : #FFFFFF;
+  text-decoration: none;
+}
+
+
+
+</style>
 </head>
 <body>
     <header>
-        <div class="container header__container">
+        <div class="container">
             <div id="nav-wrapper" class="nav-wrapper">
                 <div class="hamburger" id="js-hamburger">
                   <span class="hamburger__line hamburger__line--1"></span>
@@ -27,41 +348,42 @@
                         <li><a href="#">ログイン</a></li>
                         <li><a href="#">マイページ</a></li>
                     </ul>
-                    <ul>日本に行く
+                    <ul><li>日本に行く</li>
                         <li><a href="">日本に行くためには</a></li>
                         <li><a href="">在留資格の種類</a></li>
                         <li><a href="">在留資格/査証(VISA)取得の手続</a></li>
                     </ul>
-                    <ul>日本で暮らす
+                    <ul><li>日本で暮らす</li>
                         <li><a href="">家を探す</a></li>
                         <li><a href="">日本で暮らすために必要な手続</a></li>
                         <li><a href="">その他</a></li>
                     </ul>
-                    <ul>日本で働く
+                    <ul><li>日本で働く</li>
                         <li><a href="">働く資格の特徴</a></li>
                         <li><a href="">仕事を探す</a></li>
                         <li><a href="">その他</a></li>
                     </ul>
-                    <ul>日本で学ぶ
+                    <ul><li>日本で学ぶ</li>
                         <li><a href="">留学の資格について</a></li>
                         <li><a href="">日本の学校の特徴</a></li>
                         <li><a href="">その他</a></li>
                     </ul>
-                    <ul>スキルを磨く
-                        <li><ul>日本語を学ぶ
-                              <li>
-                                  <ul>動画コンテンツ
-                                      <li><a href="">初級</a></li>
-                                      <li><a href="">中級</a></li>
-                                      <li><a href="">技能実習生向け</a></li>
-                                      <li><a href="">特定技能向け</a></li>
-                                  </ul>
+                    <ul><li>スキルを磨く</li>
+                        <li><ul class="list2">
+                                <li>日本語を学ぶ</li>
+                                <li><ul class="list3">
+                                        <li>動画コンテンツ</li>
+                                        <li><a href="">初級</a></li>
+                                        <li><a href="">中級</a></li>
+                                        <li><a href="">技能実習生向け</a></li>
+                                        <li><a href="">特定技能向け</a></li>
+                                    </ul>
                               </li>
                               <li>教材紹介</li>
-                    </ul>
+                            </ul>
                        </li>
                       <li>
-                          <ul>特定技能を学ぶ
+                          <ul class="list2">特定技能を学ぶ
                               <li><a href="">動画コンテンツ</a></li>
                               <li><a href="">教材紹介</a></li>
                               <li><a href="">過去の試験問題</a></li>
@@ -83,9 +405,9 @@
             <img class="header__logo" src="/assets/img/common/jpgate_logo.png" alt="JapanGateロゴマーク">
             <ul class="header__lang">
                 <li><a href="">日本語</a></li>
-                <li><a href="">英語</a></li>
-                <li><a href="">中国語（繁体字）</a></li>
-                <li><a href="">中国語（簡体字）</a></li>
+                <li style="display:none;"><a href="">英語</a></li>
+                <li style="display:none;"><a href="">中国語（繁体字）</a></li>
+                <li style="display:none;"><a href="">中国語（簡体字）</a></li>
             </ul>
         </div>
     </header>
@@ -103,26 +425,27 @@
                 </h1>
             </div>
         </section>
-            <div class="container">
+        <div class="container">
                 <div id="login">
                     <form name='form-login'>
+                        <div class="inner">
                       <div class="icon__space">
                           <img src="/assets/img/login/mailaddress_icon.png" alt="メールアドレスアイコン">
                       </div>
-                        <input type="text" id="mailaddress" placeholder="メールアドレスを入力してください">
+                        <input class="login__text" type="text" id="mailaddress" placeholder="メールアドレスを入力してください">
                      
                         <div class="icon__space">
                             <img src="/assets/img/login/password_icon.png" alt="パスワードアイコン">
                         </div>
-                        <input type="password" id="pass" placeholder="パスワードを入力してください">
-                      
-                      <input type="submit" value="ログイン">
+                        <input class="login__text" type="password" id="pass" placeholder="パスワードを入力してください">
+                    </div>
+                      <input class="submit" type="submit" value="ログイン">
               
-              </form>
+                    </form>
               </div>
                 <p>--または--</p>
                 <div class="google__login"></div>
-            </div>
+        </div>
             <p>初めての方は
                 <a>こちら</a>
             から</p>
@@ -135,7 +458,7 @@
                     <dd><a href="">新規登録</a></dd>
                     <dd><a href="">JapanGateとは</a></dd>
                 <dt>Service</dt>
-                    <dd><a href=""></a>coming soon</a></dd>
+                    <dd><a href="">coming soon</a></dd>
                     <dt>News</dt>
                     <dd><a href="">新着情報</a></dd>
                     <dd><a href="">お知らせ</a></dd>
