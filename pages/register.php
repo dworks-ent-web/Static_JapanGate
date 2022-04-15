@@ -71,7 +71,7 @@
 
                     <div class="section__input">
                         <p><span>必須</span>生年月日</p>
-                        <input type="text" name="user_birth" placeholder="年/月/日">
+                        <input type="date" name="user_birth" placeholder="年/月/日">
                     </div>
 
                     <div class="section__input">
