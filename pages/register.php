@@ -7,6 +7,7 @@
     <title>登録ページ｜JapanGate</title>
     <link rel="stylesheet" href="/assets/css/common.min.css">
 </head>
+
 <body>
     <!-- <header>
         <div class="container header__container">
@@ -21,10 +22,14 @@
                 <p><a href="">TOPページ></a>新規登録</p>
             </div>
             <div class="sakura">
-                <img src="/assets/img/common/sakura_line.png">
+                <figure>
+                    <img src="/assets/img/common/sakura_line.png">
+                </figure>
             </div>
             <div class="title">
-            <img src="/assets/img/register/title_register.png">
+                <figure>
+                    <img src="/assets/img/register/title_register.png">
+                </figure>
             </div>
         </div>
         <div class="contents">
