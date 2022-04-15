@@ -60,8 +60,8 @@
                         <input type="text" name="user_password" id="user_password" placeholder="12文字以上で入力してください">
                     </div>
                     <div class="section__input">
-                        <p><span>必須</span>パスワード確認</p>
-                        <input type="text" name="user_password_check" id="user_password_check" placeholder="再度パスワードを入力してください">
+                        <p><span>必須</span>パスワード（確認）</p>
+                        <input type="text" name="user_password_confirm" id="user_password_confirm" placeholder="再度パスワードを入力してください">
                     </div>
                     
                     <div class="section__input">
@@ -98,7 +98,7 @@
                     <div class="section__input">
                         <p><span>必須</span>居住地（国）</p>
                         <select name="" id="" name="user_address_cntry">
-                            <option value="" disabled selected style="display:none;">居住地を選択してください</option>
+                            <option value="" disabled selected style="display:none;">居住地（国）を選択してください</option>
                             <option value="">Japan</option>
                             <option value="">England</option>
                             <option value="">Russia</option>
@@ -106,9 +106,9 @@
                     </div>
 
                     <div class="section__input">
-                        <p>居住地</p>
-                        <select name="" id="" name="user_address_cntry">
-                            <option value="" disabled selected style="display:none;">居住地を選択してください</option>
+                        <p>居住地（Cityレベル）</p>
+                        <select name="" id="" name="user_address_pref">
+                            <option value="" disabled selected style="display:none;">居住地（Cityレベル）を選択してください</option>
                             <option value="">Japan</option>
                             <option value="">England</option>
                             <option value="">Russia</option>
@@ -199,21 +199,20 @@
             }
             return true;
         };
+
         // 送信内容チェック
         function error_check(){
             let user_flag = false;
 
             // ユーザー名チェック
             if(!user_input_check()){
-               
                 $("#error_msg_username").html("氏名が入力されていません");
                 $("#user_name").addClass("input_form_error");
             }else{
                 $("#error_msg_username").html("");
                 $("#user_name").removeClass("input_form_error");
-                
             }
-
+            // ユーザー名カナチェック
             if(!user_input_kana_check()){
                
                $("#error_msg_username_kana").html("氏名（カナ）が入力されていません");
@@ -221,7 +220,6 @@
            }else{
                $("#error_msg_username_kana").html("");
                $("#user_kana").removeClass("input_form_error");
-               
            }
 
             
