@@ -48,12 +48,12 @@
 
                     <div class="section__input">
                         <p><span>必須</span>メールアドレス</p>
-                        <input type="text" name="email" placeholder="（例）japangate@mail.com">
+                        <input type="text" name="user_email" placeholder="（例）japangate@mail.com">
                     </div>
 
                     <div class="section__input">
                         <p><span>必須</span>パスワード</p>
-                        <input type="text" name="password" placeholder="（例）半角英数字で記入してください。">
+                        <input type="text" name="user_password" placeholder="（例）半角英数字で記入してください。">
                     </div>
                     
                     <div class="section__input">
