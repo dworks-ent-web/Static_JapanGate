@@ -136,7 +136,7 @@
 				<div class="section__input">
 					<p>その他SNS</p>
 					<input type="text" class="sns" name="user_sns_other['type']" id="user_sns_other_type" placeholder="SNS名を入力してください">
-					<input type="text" class="sns" name="user_sns_other['value']" id="user_sns_other_type" placeholder="SNSのIDを入力してください">
+					<input type="text" class="sns" name="user_sns_other['value']" id="user_sns_other_value" placeholder="SNSのIDを入力してください">
 					<span id="error_msg_user_sns_other" class="error_msg"></span>
 				</div>
 				<div class="submit_btn">
