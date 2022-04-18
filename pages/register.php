@@ -47,8 +47,8 @@
 
 				<div class="section__input">
 					<p>氏名（カタカナ）</p>
-						<input type="text" name="user_kana" id="user_kana" placeholder="（例）ヤマダ　タロウ">
-						<span id="error_msg_user_kana" class="error_msg"></span>
+					<input type="text" name="user_kana" id="user_kana" placeholder="（例）ヤマダ　タロウ">
+					<span id="error_msg_user_kana" class="error_msg"></span>
 				</div>
 
 				<div class="section__input">
@@ -83,21 +83,23 @@
 
 					<input type="radio" name="user_gender" id="unknown" class="radio_btn" value="4">
 					<label for="unknown">回答しない</label>
+                    <br>
+                    <span id="error_msg_user_gender" class="error_msg"></span>
 				</div>
 
 				<div class="section__input">
 					<p><span>必須</span>生年月日</p>
-					<input type="date" name="user_birth">
+					<input type="date" name="user_birth" id="user_birth">
 					<span id="error_msg_user_birth" class="error_msg"></span>
 				</div>
 
 				<div class="section__input">
 					<p><span>必須</span>国籍</p>
-					<select name="user_natl" id="">
+					<select name="user_natl" id="user_natl">
 						<option value="" disabled selected style="display:none;">国籍を選択してください</option>
-						<option value="">Japan</option>
-						<option value="">England</option>
-						<option value="">Russia</option>
+						<option id="japan" value="">Japan</option>
+						<option id="england" value="">England</option>
+						<option id="russia" value="">Russia</option>
 					</select>
 					<span id="error_msg_user_natl" class="error_msg"></span>
 				</div>
@@ -106,9 +108,9 @@
 					<p><span>必須</span>居住地（国）</p>
 					<select name="user_address_cntry" id="user_address_cntry">
 						<option value="" disabled selected style="display:none;">居住地（国）を選択してください</option>
-						<option value="">Japan</option>
-						<option value="">England</option>
-						<option value="">Russia</option>
+						<option id="cntry1" value="">Japan</option>
+						<option id="cntry2" value="">England</option>
+						<option id="cntry3" value="">Russia</option>
 					</select>
 					<span id="error_msg_user_address_cntry" class="error_msg"></span>
 				</div>
@@ -196,7 +198,6 @@
 		// ユーザー名空欄チェック
 		function user_input_check() {
 			const user_name = $("#user_name").val();
-
 			if (user_name.length == 0) {
 				return false;
 			}
@@ -205,11 +206,69 @@
 		// ユーザー名カナ空欄チェック
 		function user_input_kana_check() {
 			const user_kana = $("#user_kana").val();
-
 			if (user_kana.length == 0) {
 				return false;
 			}
 
+			return true;
+		};
+        // ユーザーメールアドレス空欄チェック
+		function user_input_email() {
+			const user_email = $("#user_email").val();
+			if (user_email.length == 0) {
+				return false;
+			}
+
+			return true;
+		};
+          // ユーザーパスワード空欄チェック
+		function user_input_password() {
+			const user_password = $("#user_password").val();
+			if (user_password.length == 0) {
+				return false;
+			}
+
+			return true;
+		};
+        // ユーザーパスワード一致チェック 
+        function user_input_password_confirm(){
+            const user_password = $("#user_password").val();
+            const user_password_confirm = $("#user_password_confirm").val();
+            if( user_password !== user_password_confirm || user_password.length == 0){
+                return false;
+            }
+            return true;
+        };
+        // ユーザー性別空欄チェック
+		function user_input_gender() {
+			const user_gender = $("#user_gender").val();
+			if (user_gender.length == 0) {
+				return false;
+			}
+			return true;
+		};
+        // ユーザー誕生日空欄チェック
+		function user_input_birth() {
+			const user_birth = $("#user_birth").val();
+			if (user_birth.length == 0) {
+				return false;
+			}
+			return true;
+		};
+         // ユーザー国籍空欄チェック
+		function user_input_natl() {
+			const user_natl = $("#user_natl").val();
+			if (user_natl.length == 0) {
+				return false;
+			}
+			return true;
+		};
+        // ユーザー国籍空欄チェック
+		function user_input_address_cntry() {
+			const user_address_cntry = $("#user_address_cntry").val();
+			if (user_address_cntry.length == 0) {
+				return false;
+			}
 			return true;
 		};
 
@@ -217,25 +276,94 @@
 		function error_check() {
 			let user_flag = false;
 
+            
+
 			// ユーザー名チェック
 			if (!user_input_check()) {
 				$("#error_msg_user_name").html("氏名を入力してください");
 				$("#user_name").addClass("input_form_error");
-			} else {
-				$("#error_msg_user_name").html("");
-				$("#user_name").removeClass("input_form_error");
+			    } else {
+                    $("#error_msg_user_name").html("");
+                    $("#user_name").removeClass("input_form_error");
 			}
 			// ユーザー名カナチェック
 			if (!user_input_kana_check()) {
+                $("#error_msg_user_kana").html("");
+                //$("#user_kana").addClass("input_form_error");
+                } else {
+                    if($("#user_kana").val().toUpperCase().match("^[\u30a0-\u30ff]+$")){
+                        $("#error_msg_user_kana").html("");
+                        $("#user_kana").removeClass("input_form_error");
+                    }else{
+                        $("#error_msg_user_kana").html("全角カタカナで入力してください");
+                        $("#user_kana").addClass("input_form_error");
+                    }
+                }
+            // ユーザーメールアドレスチェック
+			if (!user_input_email()) {
+                $("#error_msg_user_email").html("メールアドレスが入力されていません");
+                $("#user_email").addClass("input_form_error");
+                } else {
+                    if($("#user_email").val().toUpperCase().match( /^[A-Z0-9._%+-/!#$%&'*=?^_`{|}~]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/g )){
+                        $("#error_msg_user_email").html("");
+                        $("#user_email").removeClass("input_form_error");
+                    }else{
+                        $("#error_msg_user_email").html("メールアドレスが入力規則に沿っていません。");
+                        $("#user_email").addClass("input_form_error");
+                    }
+                }
+            // ユーザーパスワードチェック
+			if (!user_input_password()) {
+                $("#error_msg_user_password").html("パスワードが入力されていません");
+                $("#user_password").addClass("input_form_error");
+                } else {
+                    if($("#user_password").val().toUpperCase().match(/^(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9._%+-/!#$%&'*=?^_`{|}~]{8,24}$/)){
+                        $("#error_msg_user_password").html("");
+                        $("#user_password").removeClass("input_form_error");
+                    }else{
+                        $("#error_msg_user_password").html("パスワードが入力規則に沿っていません。");
+                        $("#user_password").addClass("input_form_error");
+                    }
+                }
 
-				$("#error_msg_user_kana").html("全角カタカナで入力してください");
-				$("#user_kana").addClass("input_form_error");
-			} else {
-				$("#error_msg_user_kana").html("");
-				$("#user_kana").removeClass("input_form_error");
-			}
-
-
+            // ユーザーパスワード(確認用)チェック
+            if(!user_input_password_confirm()){
+                $("#error_msg_user_password_confirm").html("入力されたパスワードが一致しません。");
+                $("#user_password_confirm").addClass("input_form_error");
+                }else{
+                    $("#error_msg_user_password_confirm").html("");
+                    $("#user_password_confirm").removeClass("input_form_error");
+            }
+             // ユーザー性別チェック
+             if ($("#male").prop('checked') || $("#female").prop('checked') || $("#other").prop('checked') || $("#unknown").prop('checked') ){
+                $("#error_msg_user_gender").html("");
+                }else {
+                    $("#error_msg_user_gender").html("性別が選択されていません");
+            }
+            // ユーザー誕生日チェック
+            if(!user_input_birth()){
+                $("#error_msg_user_birth").html("生年月日が選択されていません");
+                $("#user_birth").addClass("input_form_error");
+                }else{
+                    $("#error_msg_user_birth").html("");
+                    $("#user_birth").removeClass("input_form_error");
+            }
+            // ユーザー国籍チェック
+            if ($("#england").prop('selected') || $("#japan").prop('selected') || $("#russia").prop('selected')){
+                $("#error_msg_user_natl").html("");
+                $("#user_natl").removeClass("input_form_error");
+                }else {
+                    $("#error_msg_user_natl").html("国籍が選択されていません");
+                    $("#user_natl").addClass("input_form_error");
+            }
+             // ユーザー居住地（国）チェック
+             if ($("#cntry1").prop('selected') || $("#cntry2").prop('selected') || $("#cntry3").prop('selected')){
+                $("#error_msg_user_address_cntry").html("");
+                $("#user_address_cntry").removeClass("input_form_error");
+                }else {
+                    $("#error_msg_user_address_cntry").html("居住地(国)が選択されていません");
+                    $("#user_address_cntry").addClass("input_form_error");
+            }
 			// エラーメッセージ無い時に、SUBMITする
 			if (user_flag) {
 				// （仮）サーバーエラーメッセージ
@@ -244,37 +372,13 @@
 				// $('form').unbind('submit').submit();
 			}
 		}
+
 		$("#register_input_submit").on("click", () => {
 			// clickイベントの停止
 			event.preventDefault();
 			error_check();
 		});
 	</script>
-	<!-- <script>
-	$("#register_input_submit").on("click",(event) => {
-		// clickイベントの停止
-		event.preventDefault();
-		let pass_flag = false;
-
-		// ワンタイムパスワード空欄チェック
-		if(!pass_input_check()){
-			$("#error_msg_password").html("ワンタイムパスワードを入力してください。");
-			$("#password").addClass("input_form_error");
-		}else{
-			$("#error_msg_password").html("");
-			$("#password").removeClass("input_form_error");
-			pass_flag = true;
-		}
-
-		// エラーメッセージ無い時に、SUBMITする
-		if(pass_flag){
-			// （仮）サーバーエラーメッセージ
-			alert("submitする");
-			// btm_error();
-			// $('form').unbind('submit').submit();
-		}
-	});
-</script> -->
 </body>
 
 </html>
