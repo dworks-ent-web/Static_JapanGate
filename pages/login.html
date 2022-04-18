@@ -136,6 +136,7 @@ header .sp-nav ul.bg_circle li{
 
  /*見出し*/
   header .sp-nav ul li.bg_blue{
+      position: relative;
     box-sizing: border-box;
     width: 100%;
     font-size : 14px;
@@ -146,6 +147,7 @@ header .sp-nav ul.bg_circle li{
     border-bottom: 1px solid #fff;
   }
   header .sp-nav ul li a{
+      position: relative;
     color: #027ABB;
     background-color: #fff;
     display: inline-block;
@@ -155,43 +157,78 @@ header .sp-nav ul.bg_circle li{
     width: 100%;
   }
   ul.list2 li:first-child,
+  ul.list2 li:last-child,
   ul.list3 li:first-child{
       background-color: #fff;
       color:#027ABB;
       padding: 1em;
       border-bottom:#027ABB 1px solid;
   }
-/*   header .sp-nav ul:nth-child(6) li + li{
+  ul.list2 li:nth-child(5){
+      padding: 0;
+      border-bottom: 0;
+  }
+  ul:nth-child(8) li.bg_blue{
       padding: 0;
   }
-  header .sp-nav ul:nth-child(6) li ul.list2,
-  ul.list3{
-      margin: auto 0;
-  } */
-
-/*日本語を学ぶ*/
-/* header .sp-nav ul:nth-child(6) li ul.list2 li:first-child{
+  ul:nth-child(8) li.bg_blue a{
+      background-color: inherit;
+      color: #fff;
+      padding: 1em;
+  }
+  nav ul.faq li.bg_blue{
+      padding: 0;
+  }
+nav ul.skill li:last-child{
+    padding:0;
+    border-bottom: 0;
+}
+ul.list2 li::before{
+    content: "";
+display: inline-block;
+position: absolute;
+top: 50%;
+right: 8px;
+background-color: #027ABB;
+width: 20px;
+height: 2px;
+border-radius: 100px;
+}
+ul.list2 li:first-child::after{
+    content: "";
+display: inline-block;
+position: absolute;
+top: 50%;
+right: 8px;
+background-color: #027ABB;
+width: 20px;
+height: 2px;
+border-radius: 100px;
+transform: rotate(90deg);
+}
+li.bg_blue::before{
+content: "";
+display: inline-block;
+position: absolute;
+top: 50%;
+right: 8px;
 background-color: #fff;
-color: #027ABB;
-padding: 1em;
-box-sizing: border-box;
-border-bottom: 1px solid #027ABB;
-border-radius: 0;
-width: 260px;
-margin: 0;
-display: block;
-text-align: left;
+width: 20px;
+height: 2px;
+border-radius: 100px;
 }
-header .sp-nav ul:nth-child(6) li ul.list2 li + li{
-    padding: 0;
-    text-align: left;
+li.bg_blue::after{
+content: "";
+display: inline-block;
+position: absolute;
+top: 50%;
+right: 8px;
+background-color: #fff;
+width: 20px;
+height: 2px;
+border-radius: 100px;
+transform: rotate(90deg);
 }
-header .sp-nav ul li ul.list2 li ul.list3 li a{
-    width:260px;
-}
-header .sp-nav ul:nth-child(6) li ul.list2 li ul.list3 li + li{
-    padding: 1em;
-} */
           /* 
           black-bg(ハンバーガーメニュー解除用bg)
           =================================== */
@@ -412,7 +449,8 @@ footer div.container dl dd a{
                             </ul>
                        </li>
                       <li>
-                          <ul class="list2"><li  class="bg_blue">特定技能を学ぶ</li>
+                          <ul class="list2 skill">
+                              <li  class="bg_blue">特定技能を学ぶ</li>
                               <li><a href="">動画コンテンツ</a></li>
                               <li><a href="">教材紹介</a></li>
                               <li><a href="">過去の試験問題</a></li>
@@ -424,7 +462,7 @@ footer div.container dl dd a{
                         <li><a href="">更新情報</a></li>
                         <li><a href="">キャンペーン</a></li>
                     </ul>
-                   <ul>
+                   <ul class="faq">
                        <li class="bg_blue"><a href="">よくある質問</a></li>
                    </ul>
                 </nav>
@@ -493,7 +531,11 @@ footer div.container dl dd a{
                     </form>
               </div>
                 <p>--または--</p>
-                <div class="google__login"></div>
+                <a href="#"><div class="google__login">
+                    <img src="/assets/img/login/download.png" alt="googleアイコン">
+                    <p><span>Google</span>でログイン</p>
+                </div></a>
+            </div>
         </div>
             <p>初めての方は
                 <a>こちら</a>

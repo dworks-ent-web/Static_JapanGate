@@ -51,7 +51,7 @@ main{
 				img.sakura{
 					position: absolute;
 					top:-5px;
-					right: -30%;
+					right: -8%;
 					width: auto;
 				}
 				input.submit{
@@ -79,6 +79,30 @@ main{
 				color: #037ABC;
 				text-decoration: underline;
 			}
+		}
+		.google__login{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 142px;
+			height: 34px;
+			box-sizing: border-box;
+			margin: 0 auto;
+			padding: 6px;
+			background-color: #fff;
+			border-radius: 3px;
+			box-shadow: 0 3px #ababab;
+			img{
+				width: 17px;
+				height: 17px;
+				margin-right: 8px;
+			}
+			p{
+				margin-top: 2px;
+				color: #555;
+				font-size: 11px;
+			}
+			
 		}
 	}
 }
