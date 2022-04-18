@@ -188,12 +188,12 @@ header{
             }
             ul.list3{
                 li{
-                    :first-child[
+                    :first-child{
                         background-color: #fff;
                         color:#027ABB;
                         padding: 1em;
                         border-bottom:#027ABB 1px solid;
-                    ]
+                    }
                 }
             }
             ul.faq{
