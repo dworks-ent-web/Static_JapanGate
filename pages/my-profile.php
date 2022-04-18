@@ -209,49 +209,50 @@
 			</form>
 		</div>
 	</main>
-	<footer>
-		<div class="footer__container">
-			<div class="usage">
-				<ul>
-					<li class="font_big">How to use</li>
-				</ul>
-				<ul>
-					<li class="right"><a href="">初めての方へ</a></li>
-					<li class="right"><a href="">新規登録</a></li>
-					<li class="right"><a href="">Japan Gateとは</a></li>
-				</ul>
-			</div>
-			<div class="service">
-				<ul>
-					<li class="font_big">Service</li>
-				</ul>
-				<ul>
-					<li class="right">Coming Soon</li>
-				</ul>
-			</div>
-			<div class="news">
-				<ul>
-					<li class="font_big">News</li>
-				</ul>
-				<ul>
-					<li class="right"><a href="">新着情報</a></li>
-					<li class="right"><a href="">お知らせ</a></li>
-				</ul>
-			</div>
-			<div class="support">
-				<ul>
-					<li class="font_big">Support</li>
-				</ul>
-				<ul>
-					<li class="right"><a href="">新着情報</a></li>
-					<li class="right"><a href="">お知らせ</a></li>
-					<li class="right"><a href="">よくある質問</a></li>
-					<li class="right"><a href="">プライバシーポリシー</a></li>
-					<li class="right"><a href="">企業情報</a></li>
-				</ul>
-			</div>
-		</div>
-	</footer>
+    <footer>
+        <div class="footer__container">
+           <div class="usage">
+                <ul>
+                    <li class="font_big">How to use</li>
+                </ul>
+                <ul>
+                    <li class="right"><a href="">初めての方へ</a></li>
+                    <!-- <li class="right"><a href="">新規登録</a></li> -->
+                    <li class="right"><a href="">Japan Gateとは</a></li>
+                </ul>
+           </div>
+           <div class="service">
+                <ul>
+                    <li class="font_big">Service</li>
+                </ul>
+                <ul>
+                    <li class="right"><a href="/register/">新規登録</a></li>
+                </ul>
+           </div>
+           <div class="news">
+                <ul>
+                    <li class="font_big">News</li>
+                </ul>
+                <ul>
+                    <li class="right"><a href="">新着情報</a></li>
+                    <li class="right"><a href="">お知らせ</a></li>
+                </ul>
+           </div>
+           <div class="support">
+                <ul>
+                    <li class="font_big">Support</li>
+                </ul>
+                <ul>
+                    <li class="right"><a href="/contact/">お問い合わせ</a></li>
+                    <!-- <li class="right"><a href="">新着情報</a></li>
+                    <li class="right"><a href="">お知らせ</a></li> -->
+                    <!-- <li class="right"><a href="">よくある質問</a></li>
+                    <li class="right"><a href="">プライバシー</a></li>
+                    <li class="right"><a href="">企業情報</a></li> -->
+                </ul>
+           </div>
+        </div>
+    </footer>
 
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="/assets/js/php_functions.js"></script>
