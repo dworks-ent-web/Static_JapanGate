@@ -5,7 +5,11 @@ body{
 a{
 	text-decoration: none;
 }
-
+figure{
+	img{
+		vertical-align: bottom;
+	}
+}
 // Page title css
 .main_top{
 	display: flex;
