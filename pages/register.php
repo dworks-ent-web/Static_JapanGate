@@ -271,6 +271,15 @@
 			}
 			return true;
 		};
+           // ユーザーライン空欄チェック
+		function user_input_type_value() {
+			const user_other_type = $("#user_sns_other_type").val();
+            const user_other_value = $("#user_sns_other_value").val();
+			if (user_other_type.length == 0 || user_other_value.length == 0) {
+				return false;
+			}
+			return true;
+		};
 
 		// 送信内容チェック
 		function error_check() {
@@ -364,6 +373,16 @@
                     $("#error_msg_user_address_cntry").html("居住地(国)が選択されていません");
                     $("#user_address_cntry").addClass("input_form_error");
             }
+            // ユーザー居住地（国）チェック
+            if (!user_input_type_value()) {
+				$("#error_msg_user_sns_other").html("両方を入力してください");
+				$("#user_sns_other_type").addClass("input_form_error");
+                $("#user_sns_other_value").addClass("input_form_error");
+			    } else {
+                    $("#error_msg_user_sns_other").html("");
+                    $("#user_sns_other_type").removeClass("input_form_error");
+                    $("#user_sns_other_value").removeClass("input_form_error");
+			}
 			// エラーメッセージ無い時に、SUBMITする
 			if (user_flag) {
 				// （仮）サーバーエラーメッセージ
