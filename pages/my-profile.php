@@ -101,7 +101,7 @@
 			</div>
 			<div class="title">
 				<figure>
-					<img src="/assets/img/my-profile/title_my-profile.svg">
+					<img src="/assets/img/my-profile/title_my-profile.png">
 				</figure>
 			</div>
 		</div>

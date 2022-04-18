@@ -96,7 +96,7 @@
 			</div>
 			<div class="sakura">
 				<figure>
-					<img src="/assets/img/common/sakura_line.png">
+					<img src="/assets/img/common/sakura_line.svg">
 				</figure>
 			</div>
 			<div class="title">
