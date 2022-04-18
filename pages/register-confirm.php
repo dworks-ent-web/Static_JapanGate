@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ログイン｜JapanGate</title>
-    <link rel="stylesheet" href="/assets/css/common.min.css">
 
-    <!----Googlefont -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>登録ページ｜JapanGate</title>
+	<link rel="stylesheet" href="/assets/css/common.min.css">
 </head>
 
 <body>
-    <header>
+<header>
         <div class="container">
             <div id="nav-wrapper" class="nav-wrapper">
                 <div class="hamburger" id="js-hamburger">
@@ -92,69 +88,88 @@
             </ul>
         </div>
     </header>
-    <main>
-        <!-- <section class="title">
-            <div class="inner">
-                <div class="nav__pkz">
-                    <p>
-                        <a href="">トップページ</a>
-                        >  ログイン
-                    </p>
-                </div>
-                <h1 class="title">
-                    <img src="/assets/img/login/title_login.png" alt="ログイン">
-                </h1>
-                <img src="/assets/img/common/sakura_line.png" alt="">
-            </div>
-        </section> -->
-        <div class="main_top">
-            <div class="top_contents">
-                <p><a href="">TOPページ></a>ログイン</p>
-            </div>
-            <div class="sakura">
-                <figure>
-                    <img src="/assets/img/common/sakura_line.png">
-                </figure>
-            </div>
-            <div class="title">
-                <figure>
-                    <img src="/assets/img/login/title_login.png">
-                </figure>
-            </div>
-        </div>
-        <div class="container">
+	<main class="main">
 
-                <div id="login">
-                    <form name='login_submit'>
-                        <div class="inner">
+		<div class="main_top">
+			<div class="top_contents">
+				<p><a href="">TOPページ></a>新規登録</p>
+			</div>
+			<div class="sakura">
+				<figure>
+					<img src="/assets/img/common/sakura_line.png">
+				</figure>
+			</div>
+			<div class="title">
+				<figure>
+					<img src="/assets/img/register/title_register.png">
+				</figure>
+			</div>
+		</div>
 
-                      <div class="icon__space">
-                          <img src="/assets/img/login/mailaddress_icon.png" alt="メールアドレスアイコン">
-                      </div>
-                        <input class="login__text" type="text" id="mailaddress" name='email' placeholder="メールアドレスを入力してください">
+		<div class="main_contents">
 
-                        <div class="icon__space">
-                            <img src="/assets/img/login/password_icon.png" alt="パスワードアイコン">
-                        </div>
-                        <input class="login__text" type="password" id="pass" name='password' placeholder="パスワードを入力してください">
-                    </div>
-                    <img class="sakura" src="/assets/img/login/sakura_login.png" alt="sakura">
-                      <input class="submit" type="submit" value="ログイン">
+			<form method="post" action="" name="">
 
+				<div class="section__information">
+					<span>氏名</span>
+					<p>山田　太郎</p>
+				</div>
 
-                    </form>
-              </div>
-                <p>--または--</p>
-                <a href="#"><div class="google__login">
-                    <img src="/assets/img/login/download.png" alt="googleアイコン">
-                    <p><span>Google</span>でログイン</p>
-                </div></a>
-            </div>
-        </div>
-            <p>初めての方は
-                <a>こちら</a>
-            から</p>
-    </main>
+				<div class="section__information">
+					<span>氏名（カタカナ）</span>
+					<p>ヤマダ　タロウ</p>
+				</div>
+
+				<div class="section__information">
+					<span>メールアドレス</span>
+					<p>japangate@mail.com</p>
+				</div>
+
+				<div class="section__information">
+					<span>性別</span>
+                    <p>男性</p>
+				</div>
+
+				<div class="section__information">
+					<span>生年月日（年/月/日）</span>
+                    <p>2022/04/06</p>
+				</div>
+
+				<div class="section__information">
+					<span>国籍</span>
+                    <p>日本</p>
+				</div>
+
+				<div class="section__information">
+					<span>居住地（国）</span>
+                    <p>日本</p>
+				</div>
+
+				<div class="section__information section__information--pref">
+					<span>居住地</span>
+                    <p>東京都</p>
+				</div>
+
+				<div class="section__information">
+					<span>LINE</span>
+                    <p>@japangate1234</p>
+				</div>
+
+				<div class="section__information">
+					<span>Facebook</span>
+                    <p>@japan_gate1234</p>
+				</div>
+
+				<div class="section__information">
+					<span>その他SNS</span>
+                    <p>未登録</p>
+				</div>
+				<div class="submit_btn">
+					<input type="submit" class="submit" id="register_input_submit" name="register_input_submit" value="登録">
+				</div>
+			</form>
+		</div>
+	</main>
     <footer>
         <div class="footer__container">
            <div class="usage">
@@ -199,17 +214,32 @@
            </div>
         </div>
     </footer>
-</body>
-<script>window.onload = function () {
-    var nav = document.getElementById('nav-wrapper');
-    var hamburger = document.getElementById('js-hamburger');
-    var blackBg = document.getElementById('js-black-bg');
 
-    hamburger.addEventListener('click', function () {
-        nav.classList.toggle('open');
-    });
-    blackBg.addEventListener('click', function () {
-        nav.classList.remove('open');
-    });
-};</script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="/assets/js/php_functions.js"></script>
+	<script src="/assets/js/form.js"></script>
+	<script>
+        //header
+        window.onload = function () {
+        var nav = document.getElementById('nav-wrapper');
+        var hamburger = document.getElementById('js-hamburger');
+        var blackBg = document.getElementById('js-black-bg');
+
+        hamburger.addEventListener('click', function () {
+            nav.classList.toggle('open');
+        });
+        blackBg.addEventListener('click', function () {
+            nav.classList.remove('open');
+        });
+        };
+	
+
+		$("#register_input_submit").on("click", () => {
+			// clickイベントの停止
+			event.preventDefault();
+			
+		});
+	</script>
+</body>
+
 </html>
