@@ -96,12 +96,12 @@
 			</div>
 			<div class="sakura">
 				<figure>
-					<img src="/assets/img/common/sakura_line.png">
+					<img src="/assets/img/common/sakura_line.svg">
 				</figure>
 			</div>
 			<div class="title">
 				<figure>
-					<img src="/assets/img/my-profile/my-profile.png">
+					<img src="/assets/img/my-profile/title_my-profile.svg">
 				</figure>
 			</div>
 		</div>
