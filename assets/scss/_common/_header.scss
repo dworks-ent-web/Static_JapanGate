@@ -268,3 +268,31 @@ black-bg(ハンバーガーメニュー解除用bg)
 .container__lang li a{
                 color: #333;
               }
+
+              .header__lang{
+                position: relative;
+                .header__lang__nav{
+                    position: absolute;
+                    width: 140px;
+                    right: -20px;
+                    top: 36px;
+                    border: 1px solid #e6e9f5;
+                    box-shadow: 0 2px 4px rgba(0, 0, 0 , 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
+                    display: none;
+                    &.active{
+                        display: block;
+                    }
+                    ul{
+                        background-color: #fff;
+                        padding: 10px;
+                        li{
+                            border-bottom: 1px solid #e6e9f5;
+                            padding: 8px 0;
+                            a{
+                                font-size: 12px;
+                                color: #000000;
+                            }
+                        }
+                    }
+                }
+            }
