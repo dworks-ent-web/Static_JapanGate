@@ -166,5 +166,22 @@ main{
                 background-color: #ffdbe8;
             }
         }
+        /* 確認画面表示 */
+        .section__information{
+            margin: 40px 0px;
+            span{
+                font-size: 14px;
+                color: #9D9D9D;
+                font-weight: 500;
+                line-height: 20px;
+            }
+            p{
+                margin-top: 5px;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 23px;
+                color: #555555;
+            }
+        }
     }
 }

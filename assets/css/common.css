@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -110,6 +111,10 @@ a {
   text-decoration: none;
 }
 
+figure img {
+  vertical-align: bottom;
+}
+
 .main_top {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -164,6 +169,305 @@ a {
 
 header {
   z-index: 100;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 56px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
+header .container {
+  position: relative;
+  max-width: calc(100% - 20px);
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .container img {
+  width: 122px;
+  height: auto;
+  text-align: center;
+}
+
+header .container #nav-wrapper {
+  width: 30px;
+  height: 30px;
+}
+
+header .container .hamburger {
+  position: fixed;
+  left: 20px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 300;
+}
+
+header .container .hamburger__line {
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  right: 0;
+  background-color: #027ABB;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+header .container .hamburger__line--1 {
+  top: 3px;
+}
+
+header .container .hamburger__line--2 {
+  top: 12.25px;
+}
+
+header .container .hamburger__line--3 {
+  top: 22.25px;
+}
+
+header .container .sp-nav {
+  position: fixed;
+  left: -100%;
+  /*ハンバーガーがクリックされる前はWindow右側に隠す*/
+  top: 0;
+  width: 260px;
+  /* 出てくるスライドメニューの幅 */
+  height: 100vh;
+  background-color: #fff;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  z-index: 3000;
+  overflow-y: auto;
+  /* メニューが多くなったらスクロールできるように */
+}
+
+header .container .sp-nav ul li {
+  width: 100%;
+  font-size: 14px;
+}
+
+header .container .sp-nav ul li a {
+  position: relative;
+  color: #027ABB;
+  background-color: #fff;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1em 20px;
+  border-bottom: #027ABB 1px solid;
+  width: 100%;
+}
+
+header .container .sp-nav ul li.bg_blue {
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 1em;
+  color: #fff;
+  background-color: #027ABB;
+  border-bottom: 1px solid #fff;
+}
+
+header .container .sp-nav ul li.bg_blue ::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  background-color: #fff;
+  width: 20px;
+  height: 2px;
+  border-radius: 100px;
+}
+
+header .container .sp-nav ul li.bg_blue ::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  background-color: #fff;
+  width: 20px;
+  height: 2px;
+  border-radius: 100px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+header .container .sp-nav ul :nth-child(8) .bg_blue {
+  padding: 0;
+}
+
+header .container .sp-nav ul :nth-child(8) .bg_blue a {
+  background-color: inherit;
+  color: #fff;
+  padding: 1em;
+}
+
+header .container .sp-nav ul.bg_circle {
+  background-color: #FFFFFF;
+  margin: 0 auto;
+}
+
+header .container .sp-nav ul.bg_circle li {
+  margin: 16px auto;
+  text-align: center;
+  border: none;
+}
+
+header .container .sp-nav ul.bg_circle li a {
+  background-color: inherit;
+  border: none;
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1em;
+  background-color: #c4c4c4;
+  width: calc(100% - 20px);
+  height: 44px;
+  border-radius: 100px;
+}
+
+header .container .sp-nav ul.bg_circle li :first-child a {
+  background-color: #F98CB6;
+}
+
+header .container .sp-nav ul.list2 li :first-child {
+  background-color: #fff;
+  color: #027ABB;
+  padding: 1em;
+  border-bottom: #027ABB 1px solid;
+}
+
+header .container .sp-nav ul.list2 li :first-child ::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  background-color: #027ABB;
+  width: 20px;
+  height: 2px;
+  border-radius: 100px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+header .container .sp-nav ul.list2 li :last-child {
+  background-color: #fff;
+  color: #027ABB;
+  padding: 1em;
+  border-bottom: #027ABB 1px solid;
+}
+
+header .container .sp-nav ul.list2 li :nth-child(5) {
+  padding: 0;
+  border-bottom: 0;
+}
+
+header .container .sp-nav ul.list2 li ::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  background-color: #027ABB;
+  width: 20px;
+  height: 2px;
+  border-radius: 100px;
+}
+
+header .container .sp-nav ul.list3 li :first-child {
+  background-color: #fff;
+  color: #027ABB;
+  padding: 1em;
+  border-bottom: #027ABB 1px solid;
+}
+
+header .container .sp-nav ul.faq li.bg_blue {
+  padding: 0;
+}
+
+header .container .sp-nav ul.skill li :last-child {
+  padding: 0;
+  border-bottom: 0;
+}
+
+/*ハンバーガーがクリックされたら*/
+.open .hamburger__line--1 {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 11px;
+}
+
+.open .hamburger__line--2 {
+  opacity: 0;
+}
+
+.open .hamburger__line--3 {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 11px;
+}
+
+/*ハンバーガーがクリックされたら右からスライド*/
+.open .sp-nav {
+  left: 0;
+}
+
+/* 
+black-bg(ハンバーガーメニュー解除用bg)
+=================================== */
+.black-bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 5;
+  background-color: #000;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+  z-index: 100;
+}
+
+/*ハンバーガーメニューが開いたら表示*/
+.open .black-bg {
+  opacity: 0.3;
+  visibility: visible;
+}
+
+.container__lang li {
+  color: #333;
+}
+
+.container__lang li.none {
+  display: none;
+}
+
+.container__lang li.none a {
+  display: none;
+}
+
+.container__lang li a {
+  color: #333;
 }
 
 footer {
@@ -325,7 +629,7 @@ main .container #login form .inner input.login__text {
 main .container #login form img.sakura {
   position: absolute;
   top: -5px;
-  right: -30%;
+  right: -8%;
   width: auto;
 }
 
@@ -357,8 +661,98 @@ main .container + p a {
   text-decoration: underline;
 }
 
+main .container .google__login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 142px;
+  height: 34px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 auto;
+  padding: 6px;
+  background-color: #fff;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 3px #ababab;
+          box-shadow: 0 3px #ababab;
+}
+
+main .container .google__login img {
+  width: 17px;
+  height: 17px;
+  margin-right: 8px;
+}
+
+main .container .google__login p {
+  margin-top: 2px;
+  color: #555;
+  font-size: 11px;
+}
+
 /* TOP
 =========================*/
+.main_mb {
+  width: 100vw;
+  height: 185px;
+  background: url(/assets/img/top/main_visual.jpg) no-repeat;
+  background-size: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.main_title {
+  width: 100%;
+}
+
+.main_top .contact_wrapper {
+  width: calc(100vw - 40px);
+  height: 102px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 18px 12px;
+  position: relative;
+}
+
+.main_top .contact_wrapper h2 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #037ABC;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.main_top .contact_wrapper a {
+  font-size: 16px;
+  color: #fff;
+  width: 172px;
+  display: block;
+  height: 32px;
+  margin: 0 auto;
+  background: #F98CB6;
+  text-align: center;
+  line-height: 32px;
+  border-radius: 20px;
+}
+
+.main_top .contact_wrapper::after {
+  content: url(/assets/img/login/sakura_login.png);
+  display: block;
+  width: 92px;
+  position: absolute;
+  right: -5%;
+  top: -20%;
+}
+
 /* REGISTER
 =========================*/
 main {
@@ -429,6 +823,7 @@ main .main_contents {
   padding: 20px;
   margin: 0 auto;
   font-family: "Noto Sans CJ Kjp";
+  /* 確認画面表示 */
 }
 
 main .main_contents form {
@@ -575,6 +970,25 @@ main .main_contents form .input_form_error {
   background-color: #ffdbe8;
 }
 
+main .main_contents .section__information {
+  margin: 40px 0px;
+}
+
+main .main_contents .section__information span {
+  font-size: 14px;
+  color: #9D9D9D;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+main .main_contents .section__information p {
+  margin-top: 5px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
+  color: #555555;
+}
+
 /* REGISTER
 =========================*/
 main {
@@ -708,6 +1122,7 @@ main .main_contents_profile form input {
   background-color: #f3f3f3;
   border: 0.5px solid #dbdbdb;
   padding-left: 10px;
+  margin-bottom: 5px;
   cursor: text;
 }
 
@@ -809,6 +1224,7 @@ main .main_contents_profile form select {
   border: 0.5px solid #dbdbdb;
   padding-left: 10px;
   color: #555555;
+  margin-bottom: 5px;
 }
 
 main .main_contents_profile form .input_form_error {
