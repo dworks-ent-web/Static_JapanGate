@@ -21,7 +21,7 @@ header{
         }
         #nav-wrapper{
             width: 30px;
-            height: 30px; 
+            height: 30px;
         }
         .hamburger{
             position: fixed;
@@ -83,7 +83,7 @@ header{
                     color : #fff;
                     background-color: #027ABB;
                     border-bottom: 1px solid #fff;
-                    ::before{
+                    &::before{
                         content: "";
                         display: inline-block;
                         position: absolute;
@@ -94,7 +94,7 @@ header{
                         height: 2px;
                         border-radius: 100px;
                     }
-                    ::after{
+                    &::after{
                         content: "";
                         display: inline-block;
                         position: absolute;
@@ -107,7 +107,7 @@ header{
                         transform: rotate(90deg);
                     }
                 }
-                :nth-child(8){
+                &:nth-child(8){
                     .bg_blue{
                         padding: 0;
                         a{
@@ -136,7 +136,7 @@ header{
                         height: 44px;
                         border-radius: 100px;
                     }
-                    :first-child{
+                    &:first-child{
                         a{
                             background-color:#F98CB6;
                         }
@@ -145,12 +145,12 @@ header{
             }
             ul.list2{
                 li{
-                    :first-child{
+                    &:first-child{
                         background-color: #fff;
                         color:#027ABB;
                         padding: 1em;
                         border-bottom:#027ABB 1px solid;
-                        ::after{
+                        &::after{
                             content: "";
                             display: inline-block;
                             position: absolute;
@@ -163,17 +163,17 @@ header{
                             transform: rotate(90deg);
                         }
                     }
-                    :last-child{
+                    &:last-child{
                         background-color: #fff;
                         color:#027ABB;
                         padding: 1em;
                         border-bottom:#027ABB 1px solid;
                     }
-                    :nth-child(5){
+                    &:nth-child(5){
                         padding: 0;
                         border-bottom: 0;
                     }
-                    ::before{
+                    &::before{
                         content: "";
                         display: inline-block;
                         position: absolute;
@@ -188,7 +188,7 @@ header{
             }
             ul.list3{
                 li{
-                    :first-child{
+                    &:first-child{
                         background-color: #fff;
                         color:#027ABB;
                         padding: 1em;
@@ -203,7 +203,7 @@ header{
             }
             ul.skill{
                 li{
-                    :last-child{
+                    &:last-child{
                         padding:0;
                         border-bottom: 0; 
                     }
@@ -229,9 +229,9 @@ header{
 }
 
 /*ハンバーガーがクリックされたら右からスライド*/
-.open .sp-nav {
+header .open .sp-nav {
     left: 0;
- }
+}
  /* 
 black-bg(ハンバーガーメニュー解除用bg)
 =================================== */
