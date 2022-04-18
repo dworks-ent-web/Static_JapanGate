@@ -110,6 +110,62 @@ a {
   text-decoration: none;
 }
 
+.main_top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 150px;
+  border: 1px solid #efefef;
+  background: url(/assets/img/common/bg_yagasuri_blue.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-bottom: 20px;
+}
+
+.main_top .top_contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin-left: 20px;
+}
+
+.main_top .top_contents a {
+  color: #555555;
+}
+
+.main_top .top_contents p {
+  font-size: 10px;
+  color: #555555;
+  font-weight: 500;
+  font-weight: bold;
+}
+
+.main_top .sakura {
+  width: 100%;
+  position: absolute;
+  top: 128px;
+}
+
+.main_top .title {
+  position: absolute;
+  top: 90px;
+}
+
+header {
+  z-index: 100;
+}
+
 footer {
   width: 100%;
   height: auto;
@@ -135,7 +191,7 @@ footer .footer__container .font_big {
 }
 
 footer .footer__container .right {
-  width: 120px;
+  width: 160px;
   font-size: 14px;
 }
 
@@ -201,6 +257,106 @@ footer .footer__container a {
 
 /* LOGIN
 =========================*/
+main .container {
+  position: relative;
+  background-color: #EDF7FC;
+  padding: 16px 5px;
+  width: calc(100% - 40px);
+  margin: 32px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+}
+
+main .container #login form {
+  position: relative;
+}
+
+main .container #login form .inner {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 45px 1fr;
+      grid-template-columns: 45px 1fr;
+  min-width: 320px;
+}
+
+main .container #login form .inner .icon__space {
+  background-color: #027ABB;
+  border-radius: 5px 0 0 5px;
+  width: 45px;
+  height: 45px;
+  margin: 2px 0 0 0;
+}
+
+main .container #login form .inner .icon__space img {
+  width: auto;
+  height: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  margin-top: 4px;
+}
+
+main .container #login form .inner input.login__text {
+  border: 0.5px solid #c1c1c1;
+  border-radius: 0 5px 5px 0;
+  font-size: 12px;
+  color: #c1c1c1;
+  background-color: #fff;
+  margin: 2px 0 0 2px;
+  padding-left: 3px;
+  width: 100%;
+}
+
+main .container #login form img.sakura {
+  position: absolute;
+  top: -5px;
+  right: -30%;
+  width: auto;
+}
+
+main .container #login form input.submit {
+  display: block;
+  width: 132px;
+  height: 30px;
+  margin: 8px auto;
+  padding: 8px auto;
+  border: none;
+  background-color: #037ABC;
+  font-size: 13px;
+  color: #FFFFFF;
+  border-radius: 5px;
+}
+
+main .container #login + p {
+  font-size: 12px;
+  color: #555555;
+}
+
+main .container + p {
+  text-align: center;
+  margin: 16px auto 40px;
+}
+
+main .container + p a {
+  color: #037ABC;
+  text-decoration: underline;
+}
+
 /* TOP
 =========================*/
 /* REGISTER
@@ -416,6 +572,246 @@ main .main_contents form select {
 }
 
 main .main_contents form .input_form_error {
+  background-color: #ffdbe8;
+}
+
+/* REGISTER
+=========================*/
+main {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  font-family: "Noto Sans CJ Kjp";
+}
+
+main a {
+  color: white;
+}
+
+main .main_top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 150px;
+  border: 1px solid #efefef;
+  background: url(/assets/img/common/bg_yagasuri_blue.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-bottom: 20px;
+}
+
+main .main_top .top_contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin-left: 20px;
+}
+
+main .main_top .top_contents a {
+  color: #555555;
+}
+
+main .main_top .top_contents p {
+  font-size: 10px;
+  color: #555555;
+  font-weight: 500;
+  font-weight: bold;
+}
+
+main .main_top .sakura {
+  width: 100%;
+  position: absolute;
+  top: 128px;
+}
+
+main .main_top .title {
+  position: absolute;
+  top: 90px;
+}
+
+main .main_contents_profile {
+  width: 100%;
+  padding: 20px;
+  margin: 0 auto;
+  font-family: "Noto Sans CJ Kjp";
+}
+
+main .main_contents_profile form {
+  margin: 0 auto;
+}
+
+main .main_contents_profile form .section__input__radio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .main_contents_profile form .section__input {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 36px;
+}
+
+main .main_contents_profile form .section__input p {
+  font-size: 14px;
+  color: #555555;
+  font-weight: 500;
+  margin: 25px 0 12px;
+}
+
+main .main_contents_profile form .section__input p span {
+  width: 28px;
+  height: 17px;
+  border-radius: 4px;
+  background-color: #e86d99;
+  color: white;
+  padding: 4px;
+  font-size: 10px;
+  margin-right: 6px;
+}
+
+main .main_contents_profile form .section__input span {
+  font-size: 12px;
+  color: #e86d99;
+  font-weight: 500;
+}
+
+main .main_contents_profile form .section__input .sns {
+  margin-bottom: 8px;
+}
+
+main .main_contents_profile form .section__input--pref {
+  display: none;
+}
+
+main .main_contents_profile form .section__input--pref.active {
+  display: block;
+}
+
+main .main_contents_profile form input {
+  font-size: 12px;
+  width: 100%;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #f3f3f3;
+  border: 0.5px solid #dbdbdb;
+  padding-left: 10px;
+  cursor: text;
+}
+
+main .main_contents_profile form .radio_btn {
+  width: 9px;
+  height: 9px;
+  border-radius: 5px;
+}
+
+main .main_contents_profile form label {
+  font-size: 15px;
+  color: #555555;
+  font-weight: 500;
+  margin-right: 15px;
+}
+
+main .main_contents_profile form .check {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+main .main_contents_profile form .check .checkbox {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: 0.5px solid #dbdbdb;
+  margin-bottom: 5px;
+}
+
+main .main_contents_profile form .submit_btn {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 53px;
+}
+
+main .main_contents_profile form .submit_btn .submit {
+  width: 151px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #fa8cb6;
+  font-size: 15px;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0;
+}
+
+main .main_contents_profile form .submit_btn .submit:active {
+  background-color: #e06795;
+}
+
+main .main_contents_profile form .cancel_btn {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 14px 0px 70px 0px;
+}
+
+main .main_contents_profile form .cancel_btn .cancel {
+  width: 151px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #c1c1c1;
+  font-size: 15px;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0;
+}
+
+main .main_contents_profile form .cancel_btn .cancel:active {
+  background-color: #c1c1c1;
+}
+
+main .main_contents_profile form select {
+  -webkit-appearance: listbox !important;
+  font-size: 12px;
+  width: 100%;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #f3f3f3;
+  border: 0.5px solid #dbdbdb;
+  padding-left: 10px;
+  color: #555555;
+}
+
+main .main_contents_profile form .input_form_error {
   background-color: #ffdbe8;
 }
 /*# sourceMappingURL=common.css.map */

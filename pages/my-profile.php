@@ -30,12 +30,12 @@
 			</div>
 			<div class="title">
 				<figure>
-					<img src="/assets/img/register/title_register.png">
+					<img src="/assets/img/my-profile/my-profile.png">
 				</figure>
 			</div>
 		</div>
 
-		<div class="main_contents">
+		<div class="main_contents_profile">
 
 			<form method="post" action="" name="">
 
@@ -58,18 +58,6 @@
 				</div>
 
 				<div class="section__input">
-					<p><span>必須</span>パスワード</p>
-					<input type="password" name="user_password" id="user_password" placeholder="12文字以上で入力してください">
-					<span id="error_msg_user_password" class="error_msg"></span>
-				</div>
-
-				<div class="section__input">
-					<p><span>必須</span>パスワード（確認）</p>
-					<input type="password" name="user_password_confirm" id="user_password_confirm" placeholder="再度パスワードを入力してください">
-					<span id="error_msg_user_password_confirm" class="error_msg"></span>
-				</div>
-
-				<div class="section__input">
 					<p><span>必須</span>性別</p>
 
 					<input type="radio" name="user_gender" id="male" class="radio_btn" value="1">
@@ -88,7 +76,7 @@
 				</div>
 
 				<div class="section__input">
-					<p><span>必須</span>生年月日</p>
+					<p><span>必須</span>生年月日（年/月/日）</p>
 					<input type="date" name="user_birth" id="user_birth">
 					<span id="error_msg_user_birth" class="error_msg"></span>
 				</div>
@@ -138,11 +126,14 @@
 				<div class="section__input">
 					<p>その他SNS</p>
 					<input type="text" class="sns" name="user_sns_other['type']" id="user_sns_other_type" placeholder="SNS名を入力してください">
-					<input type="text" class="sns" name="user_sns_other['value']" id="user_sns_other_value" placeholder="SNSのIDを入力してください">
+					<input type="text" name="user_sns_other['value']" id="user_sns_other_value" placeholder="SNSのIDを入力してください">
 					<span id="error_msg_user_sns_other" class="error_msg"></span>
 				</div>
 				<div class="submit_btn">
-					<input type="submit" class="submit" id="register_input_submit" name="register_input_submit" value="確認">
+					<input type="submit" class="submit" id="register_input_submit" name="register_input_submit" value="更新">
+				</div>
+                <div class="cancel_btn">
+                    <input type="reset" class="cancel" id="register_input_cancel" name="register_input_cancel" value="キャンセル">
 				</div>
 			</form>
 		</div>
@@ -184,7 +175,7 @@
 					<li class="right"><a href="">新着情報</a></li>
 					<li class="right"><a href="">お知らせ</a></li>
 					<li class="right"><a href="">よくある質問</a></li>
-					<li class="right"><a href="">プライバシー</a></li>
+					<li class="right"><a href="">プライバシーポリシー</a></li>
 					<li class="right"><a href="">企業情報</a></li>
 				</ul>
 			</div>
@@ -221,24 +212,7 @@
 
 			return true;
 		};
-          // ユーザーパスワード空欄チェック
-		function user_input_password() {
-			const user_password = $("#user_password").val();
-			if (user_password.length == 0) {
-				return false;
-			}
-
-			return true;
-		};
-        // ユーザーパスワード一致チェック 
-        function user_input_password_confirm(){
-            const user_password = $("#user_password").val();
-            const user_password_confirm = $("#user_password_confirm").val();
-            if( user_password !== user_password_confirm || user_password.length == 0){
-                return false;
-            }
-            return true;
-        };
+       
         // ユーザー性別空欄チェック
 		function user_input_gender() {
 			const user_gender = $("#user_gender").val();
@@ -321,28 +295,7 @@
                         $("#user_email").addClass("input_form_error");
                     }
                 }
-            // ユーザーパスワードチェック
-			if (!user_input_password()) {
-                $("#error_msg_user_password").html("パスワードが入力されていません");
-                $("#user_password").addClass("input_form_error");
-                } else {
-                    if($("#user_password").val().toUpperCase().match(/^(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9._%+-/!#$%&'*=?^_`{|}~]{8,24}$/)){
-                        $("#error_msg_user_password").html("");
-                        $("#user_password").removeClass("input_form_error");
-                    }else{
-                        $("#error_msg_user_password").html("パスワードが入力規則に沿っていません。");
-                        $("#user_password").addClass("input_form_error");
-                    }
-                }
-
-            // ユーザーパスワード(確認用)チェック
-            if(!user_input_password_confirm()){
-                $("#error_msg_user_password_confirm").html("入力されたパスワードが一致しません。");
-                $("#user_password_confirm").addClass("input_form_error");
-                }else{
-                    $("#error_msg_user_password_confirm").html("");
-                    $("#user_password_confirm").removeClass("input_form_error");
-            }
+          
              // ユーザー性別チェック
              if ($("#male").prop('checked') || $("#female").prop('checked') || $("#other").prop('checked') || $("#unknown").prop('checked') ){
                 $("#error_msg_user_gender").html("");
