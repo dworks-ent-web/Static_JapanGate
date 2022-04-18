@@ -46,7 +46,7 @@
 				</div>
 
 				<div class="section__input">
-					<p>氏名（カタカナ）/p>
+					<p>氏名（カタカナ）</p>
 						<input type="text" name="user_kana" id="user_kana" placeholder="（例）ヤマダ　タロウ">
 						<span id="error_msg_user_kana" class="error_msg"></span>
 				</div>
@@ -219,19 +219,19 @@
 
 			// ユーザー名チェック
 			if (!user_input_check()) {
-				$("#error_msg_username").html("氏名を入力してください");
+				$("#error_msg_user_name").html("氏名を入力してください");
 				$("#user_name").addClass("input_form_error");
 			} else {
-				$("#error_msg_username").html("");
+				$("#error_msg_user_name").html("");
 				$("#user_name").removeClass("input_form_error");
 			}
 			// ユーザー名カナチェック
 			if (!user_input_kana_check()) {
 
-				$("#error_msg_username_kana").html("全角カタカナで入力してください");
+				$("#error_msg_user_kana").html("全角カタカナで入力してください");
 				$("#user_kana").addClass("input_form_error");
 			} else {
-				$("#error_msg_username_kana").html("");
+				$("#error_msg_user_kana").html("");
 				$("#user_kana").removeClass("input_form_error");
 			}
 
