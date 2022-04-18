@@ -88,7 +88,7 @@
 				</div>
 
 				<div class="section__input">
-					<p><span>必須</span>生年月日</p>
+					<p><span>必須</span>生年月日（年/月/日）</p>
 					<input type="date" name="user_birth" id="user_birth">
 					<span id="error_msg_user_birth" class="error_msg"></span>
 				</div>
@@ -184,7 +184,7 @@
 					<li class="right"><a href="">新着情報</a></li>
 					<li class="right"><a href="">お知らせ</a></li>
 					<li class="right"><a href="">よくある質問</a></li>
-					<li class="right"><a href="">プライバシー</a></li>
+					<li class="right"><a href="">プライバシーポリシー</a></li>
 					<li class="right"><a href="">企業情報</a></li>
 				</ul>
 			</div>
