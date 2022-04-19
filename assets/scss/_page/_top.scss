@@ -31,7 +31,7 @@ body{
     .main{
         &_mb{
             width: 100vw;
-            height: 185px;
+            height: 250px;
             background: url(/assets/img/top/main_visual.jpg) no-repeat;
             background-size: 100%;
             display: flex;
@@ -40,6 +40,7 @@ body{
         }
         &_title{
             width: 100%;
+            margin-bottom: 0px;
         }
         &_top{
         .contact_wrapper{
