@@ -1,5 +1,22 @@
 /* TOP
 =========================*/
+body{
+    position: relative;
+    .header__top{
+        box-shadow: none;
+        .header__logo{
+            height: 61px;
+            margin-top: 30px;
+        }
+}
+    .header_circle{
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+        img{
+            filter: drop-shadow(-5px 1px 1px rgba(0, 0, 0,  0.6) );
+        }
+    }
 .top{
     main{
         transform: translateY(56px);
@@ -18,12 +35,13 @@
         background-size: 100%;
         display: flex;
         align-items: flex-end;
+        margin-top: 55.45px;
     }
     &_title{
         width: 100%;
     }
     &_top{
-        .contact_wrapper{
+       .contact_wrapper{
             width: calc(100vw - 40px);
             height: 102px;
             margin: 0 auto;
@@ -89,4 +107,5 @@
         line-height: 24px;
         margin-top: 10px;
     }
+}
 }
