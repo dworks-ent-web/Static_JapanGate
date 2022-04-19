@@ -255,20 +255,26 @@ black-bg(ハンバーガーメニュー解除用bg)
     opacity: 0.3;
     visibility: visible;
 }
-.container__lang li{
-    color: #333;
-}
-.container__lang li.none{
-    display: none;
-}
-.container__lang li.none a{
-    display: none;
+.container .header__lang {
+	padding: 0;
+	line-height: unset;
 }
 
-.container__lang li a{
-    color: #333;
+.container .header__lang li {
+	color: #333;
 }
 
+.container .header__lang li.none {
+	display: none;
+}
+
+.container .header__lang li.none a {
+	display: none;
+}
+
+.container .header__lang li a {
+	color: #333;
+}
 .header__lang{
     position: relative;
     .header__lang__nav{

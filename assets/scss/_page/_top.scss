@@ -8,7 +8,7 @@ body{
             height: 61px;
             margin-top: 30px;
         }
-}
+    }
     .header_circle{
     position: fixed;
     width: 100%;
@@ -17,95 +17,95 @@ body{
             filter: drop-shadow(-5px 1px 1px rgba(0, 0, 0,  0.6) );
         }
     }
-.top{
-    main{
-        transform: translateY(56px);
-        padding-bottom: 56px;
-        .main_top{
-            margin-bottom: 0;
-            height: 200px;
+    .top{
+        main{
+            transform: translateY(56px);
+            padding-bottom: 56px;
+            .main_top{
+                margin-bottom: 0;
+                height: 200px;
+            }
         }
     }
-}
-.main{
-    &_mb{
-        width: 100vw;
-        height: 185px;
-        background: url(/assets/img/top/main_visual.jpg) no-repeat;
-        background-size: 100%;
-        display: flex;
-        align-items: flex-end;
-        margin-top: 55.45px;
-    }
-    &_title{
-        width: 100%;
-    }
-    &_top{
-       .contact_wrapper{
-            width: calc(100vw - 40px);
-            height: 102px;
-            margin: 0 auto;
-            background: rgba(255, 255, 255, 0.95);
-            padding: 18px 12px;
-            position: relative;
-            h2{
-                font-size: 18px;
-                font-weight: bold;
-                color: #037ABC;
-                margin-bottom: 10px;
-                text-align: center;
-            }
-            a{
-                font-size: 16px;
-                color: #fff;
-                width: 172px;
-                display: block;
-                height: 32px;
+    .main{
+        &_mb{
+            width: 100vw;
+            height: 185px;
+            background: url(/assets/img/top/main_visual.jpg) no-repeat;
+            background-size: 100%;
+            display: flex;
+            align-items: flex-end;
+            margin-top: 55.45px;
+        }
+        &_title{
+            width: 100%;
+        }
+        &_top{
+        .contact_wrapper{
+                width: calc(100vw - 40px);
+                height: 102px;
                 margin: 0 auto;
-                background: #F98CB6;
-                text-align: center;
-                line-height: 32px;
-                border-radius: 20px;
-            }
-            &::after{
-                content: url(/assets/img/login/sakura_login.png);
-                display: block;
-                width: 92px;
-                position: absolute;
-                right: -5%;
-                top: -20%;
+                background: rgba(255, 255, 255, 0.95);
+                padding: 18px 12px;
+                position: relative;
+                h2{
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: #037ABC;
+                    margin-bottom: 10px;
+                    text-align: center;
+                }
+                a{
+                    font-size: 16px;
+                    color: #fff;
+                    width: 172px;
+                    display: block;
+                    height: 32px;
+                    margin: 0 auto;
+                    background: #F98CB6;
+                    text-align: center;
+                    line-height: 32px;
+                    border-radius: 20px;
+                }
+                &::after{
+                    content: url(/assets/img/login/sakura_login.png);
+                    display: block;
+                    width: 92px;
+                    position: absolute;
+                    right: -5%;
+                    top: -20%;
+                }
             }
         }
     }
-}
-.top_container{
-    color: #333;
-    .main_contents{
-        position: relative;
-        padding-bottom: 60px;
-    }
-    .sakura{
-        position: absolute;
-        width: 100vw;
-        left: 0px;
-        top: -40px;
-    }
-    .contents_header{
-        span{
+    .top_container{
+        color: #333;
+        .main_contents{
+            position: relative;
+            padding-bottom: 60px;
+        }
+        .sakura{
+            position: absolute;
+            width: 100vw;
+            left: 0px;
+            top: -40px;
+        }
+        .contents_header{
+            span{
+                font-size: 14px;
+            }
+            h2{
+                font-size: 16px;
+                font-weight: bold;
+                line-height: 24px;
+                text-align: left;
+                margin: 6px auto 8px;
+            }
+        }
+        .contents_text{
             font-size: 14px;
-        }
-        h2{
-            font-size: 16px;
-            font-weight: bold;
             line-height: 24px;
-            text-align: left;
-            margin: 6px auto 8px;
+            margin-top: 10px;
         }
     }
-    .contents_text{
-        font-size: 14px;
-        line-height: 24px;
-        margin-top: 10px;
-    }
-}
 }

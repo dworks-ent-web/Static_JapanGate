@@ -10,6 +10,15 @@ figure{
 		vertical-align: bottom;
 	}
 }
+#left-area ul,
+.entry-content ul,
+.et-l--body ul,
+.et-l--footer ul,
+.et-l--header ul {
+	list-style-type: none;
+	padding: unset;
+	line-height: unset;
+}
 // Page title css
 .main_top{
 	display: flex;
