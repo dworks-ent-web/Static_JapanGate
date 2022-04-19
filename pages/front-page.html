@@ -82,13 +82,17 @@
                 <div class="black-bg" id="js-black-bg"></div>
                </div>
 
-            <img class="header__logo" src="/assets/img/common/jpgate_logo.svg" alt="JapanGateロゴマーク">
-            <ul class="header__lang">
-                <li><a href="">日本語</a></li>
-                <li style="display:none;"><a href="">英語</a></li>
-                <li style="display:none;"><a href="">中国語（繁体字）</a></li>
-                <li style="display:none;"><a href="">中国語（簡体字）</a></li>
-            </ul>
+            <a href="/"><img class="header__logo" src="/assets/img/common/jpgate_logo.svg" alt="JapanGateロゴマーク"></a>
+            <div class="header__lang">
+                <span>日本語</span>
+                <nav class="header__lang__nav">
+                    <ul>
+                        <li><a href="">日本語</a></li>
+                        <li><a href="">英語</a></li>
+                        <li><a href="">インドネシア語</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
     <main>
@@ -225,6 +229,7 @@
         </div>
     </footer>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
 window.onload = function () {
     var nav = document.getElementById('nav-wrapper');
@@ -238,5 +243,11 @@ window.onload = function () {
         nav.classList.remove('open');
     });
 };
+
+$(".header__lang").click(function() {
+    // タグ候補リスト非表示
+    $(".header__lang__nav").toggleClass('active'); 
+});
+
 </script>
 </html>
