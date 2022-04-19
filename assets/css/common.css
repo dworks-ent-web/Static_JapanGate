@@ -167,10 +167,6 @@ figure img {
   top: 90px;
 }
 
-.main_top .title img {
-  height: 23px;
-}
-
 header {
   z-index: 100;
   position: fixed;
@@ -675,16 +671,14 @@ main .container .google__login {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 142px;
+  width: 132px;
   height: 34px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin: 0 auto;
+  margin: 8px auto;
   padding: 6px;
   background-color: #fff;
-  border-radius: 3px;
-  -webkit-box-shadow: 0 3px #ababab;
-          box-shadow: 0 3px #ababab;
+  border-radius: 5px;
 }
 
 main .container .google__login img {
@@ -1503,6 +1497,11 @@ main.change_pwd .container form .form__item .error_msg {
   font-size: 12px;
   color: #e86d99;
   font-weight: 500;
+}
+
+main.change_pwd .container form .form__item .input_form_error {
+  background-color: #FFDBE8;
+  border: .5px solid #E8BECD;
 }
 
 main.change_pwd .container .button {
