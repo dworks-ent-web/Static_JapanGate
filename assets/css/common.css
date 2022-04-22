@@ -157,12 +157,11 @@ main {
           align-items: center;
   width: 100%;
   height: auto;
-  padding: 10px 0 30px;
+  padding: 10px 0 50px;
   border: 1px solid #efefef;
   background: url(/assets/img/common/bg_yagasuri_yellow.svg);
   background-repeat: no-repeat;
   background-size: 100%;
-  margin-bottom: 20px;
 }
 
 .main_top .top_contents {
@@ -1054,7 +1053,7 @@ body .main_top .contact_wrapper_icon_inner {
 }
 
 body .main_top .contact_wrapper_icon_inner img {
-  width: 122px;
+  width: 132px;
   height: auto;
 }
 
