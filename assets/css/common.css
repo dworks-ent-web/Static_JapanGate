@@ -1065,7 +1065,7 @@ body .main_top::after {
   position: absolute;
   width: 100vw;
   height: auto;
-  z-index: 100;
+  z-index: 10;
   bottom: -32px;
 }
 
