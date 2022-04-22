@@ -1055,7 +1055,7 @@ body .main_top .contact_wrapper_icon_inner {
   margin: 0 auto;
 }
 
-body .main_top .contact_wrapper_icon_inner img {
+body .main_top .contact_wrapper_icon_inner a img {
   width: 132px;
   height: auto;
 }

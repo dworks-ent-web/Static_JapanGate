@@ -107,9 +107,11 @@ body{
                         grid-template-rows: 1fr 1fr;
                         grid-gap: 15px;
                         margin: 0 auto;
-                        img{
-                            width: 132px;
-                            height: auto;
+                        a{
+                            img{
+                                width: 132px;
+                                height: auto;
+                            }
                         }
                     }
                   
