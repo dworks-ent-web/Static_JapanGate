@@ -29,6 +29,10 @@ body {
   line-height: 1;
 }
 
+.container {
+  padding-top: unset;
+}
+
 ol, ul {
   list-style: none;
 }
@@ -115,20 +119,49 @@ figure img {
   vertical-align: bottom;
 }
 
+#left-area ul,
+.entry-content ul,
+.et-l--body ul,
+.et-l--footer ul,
+.et-l--header ul {
+  list-style-type: none;
+  padding: unset;
+  line-height: unset;
+}
+
+.grecaptcha-badge {
+  bottom: 20% !important;
+  z-index: 999;
+}
+
+.container {
+  width: unset;
+}
+
+main {
+  width: 100%;
+  min-height: calc( 100vh - 120px);
+  margin: 0 auto;
+  font-family: "Noto Sans CJ Kjp";
+}
+
 .main_top {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
+  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
   height: 150px;
   border: 1px solid #efefef;
-  background: url(/assets/img/common/bg_yagasuri_blue.svg);
+  background: url(/assets/img/common/bg_yagasuri_yellow.svg);
   background-repeat: no-repeat;
   background-size: 100%;
   margin-bottom: 20px;
@@ -136,9 +169,11 @@ figure img {
 
 .main_top .top_contents {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
@@ -152,7 +187,6 @@ figure img {
 .main_top .top_contents p {
   font-size: 10px;
   color: #555555;
-  font-weight: 500;
   font-weight: bold;
 }
 
@@ -167,6 +201,99 @@ figure img {
   top: 90px;
 }
 
+.main_top .title figure {
+  height: 25px;
+}
+
+.main_top .title figure img {
+  height: 100%;
+  width: auto;
+}
+
+/* Cancel Bottan */
+.btn_cancel {
+  width: 151px;
+  height: 40px;
+  background-color: #c1c1c1;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 22px;
+}
+
+.sp-nav ul li .customGPlusSignIn {
+  border-bottom: 1px solid #027ABB;
+  padding: 14px 50px;
+  position: relative;
+}
+
+.sp-nav ul li .customGPlusSignIn img {
+  width: 23px;
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.sp-nav ul li .customGPlusSignIn .buttonText {
+  color: #027ABB;
+}
+
+.submit_btn {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 25px 0 0;
+}
+
+.submit_btn .submit {
+  width: 151px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #fa8cb6;
+  font-size: 15px;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0;
+}
+
+.submit_btn .submit:active {
+  background-color: #e06795;
+}
+
+.submit_btn_cancel {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 13px 0 48px;
+}
+
+.submit_btn_cancel .submit_cancel {
+  width: 151px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #C1C1C1;
+  font-size: 15px;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0;
+}
+
 header {
   z-index: 100;
   position: fixed;
@@ -174,24 +301,28 @@ header {
   width: 100%;
   height: 56px;
   background-color: #fff;
-  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
-          box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 0 5px 4px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 5px 4px rgba(0, 0, 0, 0.3);
 }
 
 header .container {
   position: relative;
   max-width: calc(100% - 20px);
+  width: 90%;
   height: 100%;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 0 20px;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-top: 0 !important;
 }
 
 header .container img {
@@ -429,7 +560,7 @@ header .open .sp-nav {
   left: 0;
 }
 
-/* 
+/*
 black-bg(ハンバーガーメニュー解除用bg)
 =================================== */
 .black-bg {
@@ -454,38 +585,80 @@ black-bg(ハンバーガーメニュー解除用bg)
   visibility: visible;
 }
 
-.container__lang li {
+.container .header__lang {
+  padding: 0;
+  line-height: unset;
+}
+
+.container .header__lang li {
   color: #333;
 }
 
-.container__lang li.none {
+.container .header__lang li.none {
   display: none;
 }
 
-.container__lang li.none a {
+.container .header__lang li.none a {
   display: none;
 }
 
-.container__lang li a {
+.container .header__lang li a {
   color: #333;
+}
+
+.header__lang {
+  position: relative;
+}
+
+.header__lang .header__lang__nav {
+  position: absolute;
+  width: 140px;
+  right: -20px;
+  height: 120px;
+  top: 36px;
+  border: 1px solid #e6e9f5;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: scroll;
+  display: none;
+  background-color: #fff;
+}
+
+.header__lang .header__lang__nav.active {
+  display: block;
+}
+
+.header__lang .header__lang__nav ul {
+  background-color: #fff;
+  padding: 10px;
+}
+
+.header__lang .header__lang__nav ul li {
+  padding: 8px 0;
+}
+
+.header__lang .header__lang__nav ul li:nth-of-type(n+2) {
+  border-top: 1px solid #e6e9f5;
+}
+
+.header__lang .header__lang__nav ul li a {
+  font-size: 12px;
+  color: #000000;
 }
 
 footer {
   width: 100%;
   height: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
+  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
 footer .footer__container {
   width: 100%;
-  height: 443px;
-  background-color: #2a1f55;
-  padding: 20px 20px 0;
+  background-color: #027ABB;
+  padding: 20px;
 }
 
 footer .footer__container .font_big {
@@ -503,10 +676,12 @@ footer .footer__container .usage {
   width: 100%;
   height: 100px;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   color: #ffffff;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   line-height: 30px;
@@ -515,12 +690,13 @@ footer .footer__container .usage {
 
 footer .footer__container .service {
   width: 100%;
-  height: 50px;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   color: #ffffff;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   line-height: 30px;
@@ -531,10 +707,12 @@ footer .footer__container .news {
   width: 100%;
   height: 100px;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   color: #ffffff;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   line-height: 30px;
@@ -543,12 +721,13 @@ footer .footer__container .news {
 
 footer .footer__container .support {
   width: 100%;
-  height: 100px;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   color: #ffffff;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   line-height: 30px;
@@ -559,6 +738,37 @@ footer .footer__container a {
   color: #fff;
 }
 
+footer #footer_bottom {
+  background-color: #002D76;
+  width: 100%;
+  height: 60px;
+}
+
+footer #footer_bottom_inner {
+  width: calc(100% * 1150 / 1280);
+  max-width: 1150px;
+  margin: 0 auto;
+  height: 60px;
+  position: relative;
+}
+
+footer .clearfix {
+  display: block;
+}
+
+footer #copyright {
+  text-align: center;
+  height: 60px;
+  line-height: 60px;
+  color: #fff;
+  font-size: 14px;
+}
+
+footer #copyright a {
+  color: #fff;
+  font-size: 14px;
+}
+
 /* LOGIN
 =========================*/
 main .container {
@@ -566,23 +776,39 @@ main .container {
   background-color: #EDF7FC;
   padding: 16px 5px;
   width: calc(100% - 40px);
-  margin: 32px auto;
+  margin: 32px auto 0;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
   -webkit-box-pack: center;
+  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   border-radius: 5px;
+}
+
+main .container.error_msg {
+  padding-top: 36px !important;
+}
+
+main .container .error_msg {
+  font-size: 12px;
+  color: #e86d99;
+  font-weight: 500;
+  padding-bottom: 10px;
 }
 
 main .container #login form {
@@ -619,7 +845,7 @@ main .container #login form .inner input.login__text {
   border: 0.5px solid #c1c1c1;
   border-radius: 0 5px 5px 0;
   font-size: 12px;
-  color: #c1c1c1;
+  color: #333;
   background-color: #fff;
   margin: 2px 0 0 2px;
   padding-left: 3px;
@@ -629,8 +855,8 @@ main .container #login form .inner input.login__text {
 main .container #login form img.sakura {
   position: absolute;
   top: -5px;
-  right: -8%;
-  width: auto;
+  right: -6%;
+  width: 75px;
 }
 
 main .container #login form input.submit {
@@ -661,14 +887,17 @@ main .container + p a {
   text-decoration: underline;
 }
 
-main .container .google__login {
+main .container #btn_google__login {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
+  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   width: 132px;
@@ -678,52 +907,106 @@ main .container .google__login {
   margin: 8px auto;
   padding: 6px;
   background-color: #fff;
+  border-bottom: solid 1px #B9C1C5;
   border-radius: 5px;
+  cursor: pointer;
 }
 
-main .container .google__login img {
+main .container #btn_google__login:hover {
+  -webkit-box-shadow: 0 0 3px 3px rgba(66, 133, 244, 0.3);
+          box-shadow: 0 0 3px 3px rgba(66, 133, 244, 0.3);
+}
+
+main .container #btn_google__login img {
   width: 17px;
   height: 17px;
   margin-right: 8px;
 }
 
-main .container .google__login p {
+main .container #btn_google__login .buttonText {
   margin-top: 2px;
   color: #555;
   font-size: 11px;
 }
 
+main p.login_register {
+  text-align: right;
+  padding: 5px 0;
+  margin: 0 auto 30px;
+  max-width: 1080px;
+  width: calc(100% - 45px);
+  font-size: 13px;
+  color: #333;
+}
+
 /* TOP
 =========================*/
-.top main {
+body {
+  position: relative;
+}
+
+body .header__top {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+body .header__top .header__logo {
+  height: 56px;
+  margin-top: 20px;
+}
+
+body .header__top .header__logo__wrapper {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+body .header_circle {
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
+
+body .header_circle img {
+  -webkit-filter: drop-shadow(0px 1px 6px rgba(0, 0, 0, 0.2));
+          filter: drop-shadow(0px 1px 6px rgba(0, 0, 0, 0.2));
+  vertical-align: bottom;
+}
+
+body .top main {
   -webkit-transform: translateY(56px);
           transform: translateY(56px);
   padding-bottom: 56px;
 }
 
-.top main .main_top {
+body .top main .main_top {
   margin-bottom: 0;
   height: 200px;
 }
 
-.main_mb {
+body .main_mb {
   width: 100vw;
-  height: 185px;
-  background: url(/assets/img/top/main_visual.jpg) no-repeat;
+  height: 250px;
+  background: url(/assets/img/top/main_visual.png) no-repeat;
   background-size: 100%;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: end;
+  -webkit-align-items: flex-end;
       -ms-flex-align: end;
           align-items: flex-end;
+  margin-top: 54.42px;
 }
 
-.main_title {
+body .main_title {
   width: 100%;
+  margin-bottom: 0px;
 }
 
-.main_top .contact_wrapper {
+body .main_top .contact_wrapper {
   width: calc(100vw - 40px);
   height: 102px;
   margin: 0 auto;
@@ -732,7 +1015,7 @@ main .container .google__login p {
   position: relative;
 }
 
-.main_top .contact_wrapper h2 {
+body .main_top .contact_wrapper h2 {
   font-size: 18px;
   font-weight: bold;
   color: #037ABC;
@@ -740,7 +1023,7 @@ main .container .google__login p {
   text-align: center;
 }
 
-.main_top .contact_wrapper a {
+body .main_top .contact_wrapper a {
   font-size: 16px;
   color: #fff;
   width: 172px;
@@ -753,8 +1036,8 @@ main .container .google__login p {
   border-radius: 20px;
 }
 
-.main_top .contact_wrapper::after {
-  content: url(/assets/img/login/sakura_login.png);
+body .main_top .contact_wrapper::after {
+  content: url(/assets/img/login/sakura_login.svg);
   display: block;
   width: 92px;
   position: absolute;
@@ -762,27 +1045,27 @@ main .container .google__login p {
   top: -20%;
 }
 
-.top_container {
+body .top_container {
   color: #333;
 }
 
-.top_container .main_contents {
+body .top_container .main_contents {
   position: relative;
   padding-bottom: 60px;
 }
 
-.top_container .sakura {
+body .top_container .sakura {
   position: absolute;
   width: 100vw;
   left: 0px;
   top: -40px;
 }
 
-.top_container .contents_header span {
+body .top_container .contents_header span {
   font-size: 14px;
 }
 
-.top_container .contents_header h2 {
+body .top_container .contents_header h2 {
   font-size: 16px;
   font-weight: bold;
   line-height: 24px;
@@ -790,7 +1073,7 @@ main .container .google__login p {
   margin: 6px auto 8px;
 }
 
-.top_container .contents_text {
+body .top_container .contents_text {
   font-size: 14px;
   line-height: 24px;
   margin-top: 10px;
@@ -798,67 +1081,8 @@ main .container .google__login p {
 
 /* REGISTER
 =========================*/
-main {
-  width: 100%;
-  height: auto;
-  margin: 0 auto;
-  font-family: "Noto Sans CJ Kjp";
-}
-
 main a {
   color: white;
-}
-
-main .main_top {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  height: 150px;
-  border: 1px solid #efefef;
-  background: url(/assets/img/common/bg_yagasuri_blue.png);
-  background-repeat: no-repeat;
-  background-size: 100%;
-  margin-bottom: 20px;
-}
-
-main .main_top .top_contents {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  margin-left: 20px;
-}
-
-main .main_top .top_contents a {
-  color: #555555;
-}
-
-main .main_top .top_contents p {
-  font-size: 10px;
-  color: #555555;
-  font-weight: 500;
-  font-weight: bold;
-}
-
-main .main_top .sakura {
-  width: 100%;
-  position: absolute;
-  top: 128px;
-}
-
-main .main_top .title {
-  position: absolute;
-  top: 90px;
 }
 
 main .main_contents {
@@ -875,6 +1099,7 @@ main .main_contents form {
 
 main .main_contents form .section__input__radio {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
@@ -953,9 +1178,11 @@ main .main_contents form .check {
   width: 100%;
   height: auto;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   gap: 5px;
@@ -973,28 +1200,31 @@ main .main_contents form .check .checkbox {
 main .main_contents form .submit_btn {
   width: 100%;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
+  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 30px 0px;
+  /* .submit{
+                    width: 151px;
+                    height: 40px;
+                    border-radius: 10px;
+                    background-color: #fa8cb6;
+                    font-size: 15px;
+                    color: #ffffff;
+                    font-weight: bold;
+                    cursor: pointer;
+                    padding: 0;
+                    &:active{
+                        background-color: #e06795;
+                    }
+                } */
 }
 
-main .main_contents form .submit_btn .submit {
-  width: 151px;
-  height: 40px;
-  border-radius: 10px;
-  background-color: #fa8cb6;
-  font-size: 15px;
-  color: #ffffff;
-  font-weight: bold;
-  cursor: pointer;
-  padding: 0;
-}
-
-main .main_contents form .submit_btn .submit:active {
-  background-color: #e06795;
+main .main_contents form .submit_btn_register {
+  margin: 30px 0;
 }
 
 main .main_contents form select {
@@ -1034,82 +1264,64 @@ main .main_contents .section__information p {
 
 /* REGISTER
 =========================*/
-main {
-  width: 100%;
-  height: auto;
-  margin: 0 auto;
-  font-family: "Noto Sans CJ Kjp";
-}
-
 main a {
   color: white;
 }
 
-main .main_top {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  height: 150px;
-  border: 1px solid #efefef;
-  background: url(/assets/img/common/bg_yagasuri_blue.png);
-  background-repeat: no-repeat;
-  background-size: 100%;
-  margin-bottom: 20px;
-}
-
-main .main_top .top_contents {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  margin-left: 20px;
-}
-
-main .main_top .top_contents a {
-  color: #555555;
-}
-
-main .main_top .top_contents p {
-  font-size: 10px;
-  color: #555555;
-  font-weight: 500;
-  font-weight: bold;
-}
-
-main .main_top .sakura {
-  width: 100%;
-  position: absolute;
-  top: 128px;
-}
-
-main .main_top .title {
-  position: absolute;
-  top: 90px;
-}
-
 main .main_contents_profile {
   width: 100%;
-  padding: 20px;
+  padding: 0 20px;
   margin: 0 auto;
   font-family: "Noto Sans CJ Kjp";
 }
 
 main .main_contents_profile form {
   margin: 0 auto;
+  /* .submit_btn{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                margin-top: 53px;
+                .submit{
+                    width: 151px;
+                    height: 40px;
+                    border-radius: 10px;
+                    background-color: #fa8cb6;
+                    font-size: 15px;
+                    color: #ffffff;
+                    font-weight: bold;
+                    cursor: pointer;
+                    padding: 0;
+                    &:active{
+                        background-color: #e06795;
+                    }
+                }
+            } */
+  /*  .cancel_btn{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                margin: 14px 0px 70px 0px;
+                .cancel{
+                    width: 151px;
+                    height: 40px;
+                    border-radius: 10px;
+                    background-color: #c1c1c1;
+                    font-size: 15px;
+                    color: #ffffff;
+                    font-weight: bold;
+                    cursor: pointer;
+                    padding: 0;
+                    &:active{
+                        background-color: #c1c1c1;
+                    }
+                }
+            } */
 }
 
 main .main_contents_profile form .section__input__radio {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
@@ -1186,9 +1398,11 @@ main .main_contents_profile form .check {
   width: 100%;
   height: auto;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   gap: 5px;
@@ -1201,60 +1415,6 @@ main .main_contents_profile form .check .checkbox {
   border-radius: 5px;
   border: 0.5px solid #dbdbdb;
   margin-bottom: 5px;
-}
-
-main .main_contents_profile form .submit_btn {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: 53px;
-}
-
-main .main_contents_profile form .submit_btn .submit {
-  width: 151px;
-  height: 40px;
-  border-radius: 10px;
-  background-color: #fa8cb6;
-  font-size: 15px;
-  color: #ffffff;
-  font-weight: bold;
-  cursor: pointer;
-  padding: 0;
-}
-
-main .main_contents_profile form .submit_btn .submit:active {
-  background-color: #e06795;
-}
-
-main .main_contents_profile form .cancel_btn {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 14px 0px 70px 0px;
-}
-
-main .main_contents_profile form .cancel_btn .cancel {
-  width: 151px;
-  height: 40px;
-  border-radius: 10px;
-  background-color: #c1c1c1;
-  font-size: 15px;
-  color: #ffffff;
-  font-weight: bold;
-  cursor: pointer;
-  padding: 0;
-}
-
-main .main_contents_profile form .cancel_btn .cancel:active {
-  background-color: #c1c1c1;
 }
 
 main .main_contents_profile form select {
@@ -1279,6 +1439,10 @@ main .main_contents_profile form .input_form_error {
   font-style: normal;
 }
 
+.wrapper .inner_title {
+  margin-bottom: 37px;
+}
+
 .wrapper .inner_title p {
   font-weight: 500;
   font-size: 12px;
@@ -1287,23 +1451,75 @@ main .main_contents_profile form .input_form_error {
   padding-top: 10px;
 }
 
+.wrapper .companyDeta {
+  background-color: #EDF7FC;
+  padding: 16px;
+  border-radius: 5px;
+  position: relative;
+}
+
 .wrapper .companyDeta .operating_company {
+  background-color: #EDF7FC;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 20px;
   color: #555555;
   text-align: center;
-  padding-top: 37px;
+  padding-bottom: 10px;
+}
+
+.wrapper .companyDeta .list-horizontal {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.wrapper .companyDeta .list-horizontal .flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+  padding-bottom: 7px;
+}
+
+.wrapper .companyDeta .list-horizontal .flex h3 {
+  width: 64px;
+  font-size: 16px;
+  line-height: 25px;
 }
 
 .wrapper .companyDeta .list-horizontal .flex .span_titel {
   font-weight: 500;
-  font-size: 17px;
+  font-size: 16px;
   line-height: 25px;
   display: block;
   text-align: center;
   color: #555555;
-  padding-bottom: 7px;
+  text-align: initial;
+}
+
+.wrapper .companyDeta .sakura {
+  position: absolute;
+  top: -18px;
+  right: 14px;
+  width: 75px;
+  -webkit-transform: rotate(-78deg);
+          transform: rotate(-78deg);
 }
 
 .wrapper .form_wrapper {
@@ -1381,9 +1597,11 @@ main .main_contents_profile form .input_form_error {
 .wrapper .submit_btn {
   width: 100%;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
+  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   margin: 25px 0 0;
@@ -1408,9 +1626,11 @@ main .main_contents_profile form .input_form_error {
 .wrapper .submit_btn_cancel {
   width: 100%;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
+  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   margin: 13px 0 48px;
@@ -1502,47 +1722,5 @@ main.change_pwd .container form .form__item .error_msg {
 main.change_pwd .container form .form__item .input_form_error {
   background-color: #FFDBE8;
   border: .5px solid #E8BECD;
-}
-
-main.change_pwd .container .button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-main.change_pwd .container .button input {
-  width: 150px;
-  height: 40px;
-  color: #fff;
-  font-size: 15px;
-  font-weight: 600;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 1em;
-  border-radius: 10px;
-  background-color: #FA8CB6;
-  margin-bottom: 16px;
-}
-
-main.change_pwd .container .button input :hover {
-  background-color: #E06795;
-}
-
-main.change_pwd .container .button input + input {
-  background-color: #C1C1C1;
-}
-
-main.change_pwd .container .button input + input :hover {
-  background-color: #A8A8A8;
 }
 /*# sourceMappingURL=common.css.map */

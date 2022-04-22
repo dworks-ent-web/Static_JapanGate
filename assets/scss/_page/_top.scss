@@ -6,7 +6,12 @@ body{
         box-shadow: none;
         .header__logo{
             height: 56px;
-            margin-top: 19px;
+            margin-top: 20px;
+        }
+        .header__logo__wrapper{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
         }
     }
     .header_circle{
@@ -70,7 +75,7 @@ body{
                     border-radius: 20px;
                 }
                 &::after{
-                    content: url(/assets/img/login/sakura_login.png);
+                    content: url(/assets/img/login/sakura_login.svg);
                     display: block;
                     width: 92px;
                     position: absolute;

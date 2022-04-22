@@ -1,21 +1,17 @@
 /* REGISTER
 =========================*/
 main{
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-    font-family: "Noto Sans CJ Kjp";
     a{
         color: white;
     }
     .main_contents_profile{
         width: 100%;
-        padding: 20px;
+        padding:0 20px;
         margin: 0 auto;
         font-family: "Noto Sans CJ Kjp";
-        
+
         form{
-            
+
             margin: 0 auto;
             .section__input__radio{
                 display: flex;
@@ -49,7 +45,7 @@ main{
                 .sns{
                     margin-bottom: 8px;
                 }
-               
+
                 &--pref{
                     display: none;
                     &.active{
@@ -94,7 +90,7 @@ main{
                     margin-bottom: 5px;
                 }
             }
-            .submit_btn{
+            /* .submit_btn{
                 width: 100%;
                 display: flex;
                 justify-content: center;
@@ -113,8 +109,8 @@ main{
                         background-color: #e06795;
                     }
                 }
-            }
-            .cancel_btn{
+            } */
+           /*  .cancel_btn{
                 width: 100%;
                 display: flex;
                 justify-content: center;
@@ -133,7 +129,7 @@ main{
                         background-color: #c1c1c1;
                     }
                 }
-            }
+            } */
             select{
                 -webkit-appearance: listbox !important;
                 font-size: 12px;

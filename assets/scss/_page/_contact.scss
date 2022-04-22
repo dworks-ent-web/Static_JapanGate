@@ -2,36 +2,60 @@
     font-family: 'Noto Sans JP';
     font-style: normal;
     .inner_title{
+        margin-bottom: 37px;
         p{
             font-weight: 500;
             font-size: 12px;
             line-height: 17px;
-            color: #555555;  
+            color: #555555;
             padding-top: 10px;
         }
-        
     }
     .companyDeta{
+        background-color: #EDF7FC;
+        padding: 16px;
+        border-radius: 5px;
+        position: relative;
         .operating_company{
+            background-color: #EDF7FC;
             font-weight: 400;
-            font-size: 14px;
+            font-size: 16px;
             line-height: 20px;
             color: #555555;
             text-align: center;
-            padding-top: 37px;
+            padding-bottom: 10px;
         }
         .list-horizontal{
+            display: flex;
+            flex-flow: row wrap;
             .flex{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+                padding-bottom: 7px;
+                h3{
+                    width: 64px;
+                    font-size: 16px;
+                    line-height: 25px;
+                }
                 .span_titel{
                     font-weight: 500;
-                    font-size: 17px;
+                    font-size: 16px;
                     line-height: 25px;
                     display: block;
                     text-align: center;
-                    color: #555555;  
-                    padding-bottom: 7px;
+                    color: #555555;
+                    text-align: initial;
                 }
             }
+        }
+        .sakura {
+            position: absolute;
+            top: -18px;
+            right: 14px;
+            width: 75px;
+            transform: rotate(-78deg);
         }
     }
     .form_wrapper{
@@ -48,7 +72,7 @@
                 cursor: text;
                 margin-top: 7px;
                 font-size: 12px;
-                
+
             }
             .wpcf7-not-valid-tip{
                     color: #E86D99;
@@ -67,7 +91,7 @@
                 &::placeholder{
                     font-size: 12px;
                 }
-            } 
+            }
         }
         .wpcf7-response-output{
             width: 100%;
@@ -79,7 +103,7 @@
     }
     .wpcf7 form.invalid .wpcf7-response-output{
         border-color: #E8BECD;
-        border-style: solid; 
+        border-style: solid;
         border-width: .5px;
     }
     .wpcf7-textarea{
@@ -104,7 +128,6 @@
                 background-color: #e06795;
             }
         }
-        
     }
     .submit_btn_cancel{
         width: 100%;

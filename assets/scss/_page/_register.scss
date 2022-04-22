@@ -1,10 +1,6 @@
 /* REGISTER
 =========================*/
 main{
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-    font-family: "Noto Sans CJ Kjp";
     a{
         color: white;
     }
@@ -13,9 +9,9 @@ main{
         padding: 20px;
         margin: 0 auto;
         font-family: "Noto Sans CJ Kjp";
-    
+
         form{
-            
+
             margin: 0 auto;
             .section__input__radio{
                 display: flex;
@@ -98,8 +94,7 @@ main{
                 width: 100%;
                 display: flex;
                 justify-content: center;
-                margin: 30px 0px;
-                .submit{
+                /* .submit{
                     width: 151px;
                     height: 40px;
                     border-radius: 10px;
@@ -112,6 +107,9 @@ main{
                     &:active{
                         background-color: #e06795;
                     }
+                } */
+                &_register{
+                margin: 30px 0;
                 }
             }
             select{

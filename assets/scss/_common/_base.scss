@@ -1,5 +1,5 @@
 body{
-	font-family: 'Noto Sans JP', sans-serif; 
+	font-family: 'Noto Sans JP', sans-serif;
 }
 
 a{
@@ -19,7 +19,21 @@ figure{
 	padding: unset;
 	line-height: unset;
 }
+//google recaptcha
+.grecaptcha-badge{
+	bottom: 20% !important;
+	z-index: 999;
+}
+.container {
+	width: unset;
+}
 // Page title css
+main{
+    width: 100%;
+    min-height: calc( 100vh - 120px);
+    margin: 0 auto;
+    font-family: "Noto Sans CJ Kjp";
+}
 .main_top{
 	display: flex;
 	justify-content: center;
@@ -30,7 +44,7 @@ figure{
 	background: url(/assets/img/common/bg_yagasuri_yellow.svg);
 	background-repeat: no-repeat;
 	background-size: 100%;
-	padding-bottom: 20px;
+	margin-bottom: 20px;
 	.top_contents{
 		display: flex;
 		align-items: center;
@@ -42,7 +56,6 @@ figure{
 		p{
 			font-size: 10px;
 			color: #555555;
-			font-weight: 500;
 			font-weight: bold;
 		}
 	}
@@ -57,20 +70,80 @@ figure{
 		figure{
 			height: 25px;
 			img{
-				height:28px;
+				height: 100%;
 				width: auto;
 			}
 		}
 	}
-	/* &::after{
-		content: "";
-		width: 100%;
+}
+/* Cancel Bottan */
+.btn_cancel{
+	width: 151px;
+	height: 40px;
+	background-color: #c1c1c1;
+	color: #ffffff;
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 22px;
+}
+.sp-nav{
+	ul{
+		li{
+			.customGPlusSignIn{
+				border-bottom: 1px solid #027ABB;
+				padding: 14px 50px;
+				position: relative;
+				img{
+					width: 23px;
+					position: absolute;
+					top: 50%;
+					left: 20px;
+					transform: translate(0,-50%);
+				}
+				.buttonText{
+					color: #027ABB;
+				}
+			}
+		}
+	}
+}
+
+
+
+.submit_btn{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin:25px 0 0;
+	.submit{
+		width: 151px;
 		height: 40px;
-		background: url(/assets/img/common/sakura_line_long.svg);
-		background-size: contain;
-		background-size: cover;
-		position: absolute;
-		background-repeat: repeat-x;
-		top: 128px;
-	} */
+		border-radius: 10px;
+		background-color: #fa8cb6;
+		font-size: 15px;
+		color: #ffffff;
+		font-weight: bold;
+		cursor: pointer;
+		padding: 0;
+		&:active{
+			background-color: #e06795;
+		}
+	}
+}
+.submit_btn_cancel{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin:13px 0 48px;
+	.submit_cancel{
+		width: 151px;
+		height: 40px;
+		border-radius: 10px;
+		background-color: #C1C1C1;
+		font-size: 15px;
+		color: #ffffff;
+		font-weight: bold;
+		cursor: pointer;
+		padding: 0;
+	}
 }
