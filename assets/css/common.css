@@ -147,19 +147,17 @@ main {
 
 .main_top {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  height: 150px;
+  height: auto;
+  padding: 10px 0 30px;
   border: 1px solid #efefef;
   background: url(/assets/img/common/bg_yagasuri_yellow.svg);
   background-repeat: no-repeat;
@@ -169,11 +167,9 @@ main {
 
 .main_top .top_contents {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
@@ -243,11 +239,9 @@ main {
 .submit_btn {
   width: 100%;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   margin: 25px 0 0;
@@ -272,11 +266,9 @@ main {
 .submit_btn_cancel {
   width: 100%;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   margin: 13px 0 48px;
@@ -311,15 +303,12 @@ header .container {
   width: 90%;
   height: 100%;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   padding-top: 0 !important;
@@ -650,7 +639,6 @@ footer {
   width: 100%;
   height: auto;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
@@ -676,12 +664,10 @@ footer .footer__container .usage {
   width: 100%;
   height: 100px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   color: #ffffff;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   line-height: 30px;
@@ -691,12 +677,10 @@ footer .footer__container .usage {
 footer .footer__container .service {
   width: 100%;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   color: #ffffff;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   line-height: 30px;
@@ -707,12 +691,10 @@ footer .footer__container .news {
   width: 100%;
   height: 100px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   color: #ffffff;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   line-height: 30px;
@@ -722,12 +704,10 @@ footer .footer__container .news {
 footer .footer__container .support {
   width: 100%;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   color: #ffffff;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   line-height: 30px;
@@ -778,23 +758,18 @@ main .container {
   width: calc(100% - 40px);
   margin: 32px auto 0;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: nowrap;
-      -ms-flex-wrap: nowrap;
-          flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   border-radius: 5px;
@@ -889,15 +864,12 @@ main .container + p a {
 
 main .container #btn_google__login {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   width: 132px;
@@ -991,11 +963,9 @@ body .main_mb {
   background: url(/assets/img/top/main_visual.png) no-repeat;
   background-size: 100%;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: end;
-  -webkit-align-items: flex-end;
       -ms-flex-align: end;
           align-items: flex-end;
   margin-top: 54.42px;
@@ -1006,10 +976,26 @@ body .main_title {
   margin-bottom: 0px;
 }
 
+body .main_top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 body .main_top .contact_wrapper {
   width: calc(100vw - 40px);
-  height: 102px;
-  margin: 0 auto;
+  height: auto;
+  margin: 20px auto 0;
   background: rgba(255, 255, 255, 0.95);
   padding: 18px 12px;
   position: relative;
@@ -1043,6 +1029,33 @@ body .main_top .contact_wrapper::after {
   position: absolute;
   right: -5%;
   top: -20%;
+}
+
+body .main_top .contact_wrapper_icon {
+  width: calc(100vw - 40px);
+  height: auto;
+  margin: 20px auto 0;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 18px 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .main_top .contact_wrapper_icon_inner {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 132px 132px;
+      grid-template-columns: 132px 132px;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  grid-gap: 15px;
+  margin: 0 auto;
+}
+
+body .main_top .contact_wrapper_icon_inner img {
+  width: 122px;
+  height: auto;
 }
 
 body .top_container {
@@ -1099,7 +1112,6 @@ main .main_contents form {
 
 main .main_contents form .section__input__radio {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
@@ -1178,11 +1190,9 @@ main .main_contents form .check {
   width: 100%;
   height: auto;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   gap: 5px;
@@ -1200,11 +1210,9 @@ main .main_contents form .check .checkbox {
 main .main_contents form .submit_btn {
   width: 100%;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   /* .submit{
@@ -1321,7 +1329,6 @@ main .main_contents_profile form {
 
 main .main_contents_profile form .section__input__radio {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
@@ -1398,11 +1405,9 @@ main .main_contents_profile form .check {
   width: 100%;
   height: auto;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   gap: 5px;
@@ -1470,27 +1475,22 @@ main .main_contents_profile form .input_form_error {
 
 .wrapper .companyDeta .list-horizontal {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
 }
 
 .wrapper .companyDeta .list-horizontal .flex {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   gap: 30px;
@@ -1597,11 +1597,9 @@ main .main_contents_profile form .input_form_error {
 .wrapper .submit_btn {
   width: 100%;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   margin: 25px 0 0;
@@ -1626,11 +1624,9 @@ main .main_contents_profile form .input_form_error {
 .wrapper .submit_btn_cancel {
   width: 100%;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   margin: 13px 0 48px;
