@@ -132,6 +132,9 @@ body{
             &_last::after{
                 content: "";
             }
+            &:nth-child(2){
+                background-color: #fff;
+            }
         }
     }
     
