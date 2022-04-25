@@ -34,6 +34,7 @@ body{
         }
     }
     .main{
+        
         &_mb{
             width: 100vw;
             height: 250px;
@@ -89,7 +90,6 @@ body{
                 }
                 &_icon{
                     display: flex;
-                    width: calc(100vw - 40px);
                     height: auto;
                     background: rgba(255, 255, 255, 0.95);
 
@@ -118,22 +118,113 @@ body{
                 }
                
             }
-            &::after{
+           /*  &::after{
                 content: url("/assets/img/common/sakura_line02.svg");
                 position: absolute;
                 width: 100vw;
                 height: auto;
                 z-index: 10;
                 bottom: -32px;
-            }
-            &_first{
+            } */
+           /*  &_first{
                 padding-top: 20px;
             }
             &_last::after{
                 content: "";
+            } */
+        }
+       
+    }
+
+    .main_top_second{
+        padding: 30px 0 50px 0;
+        margin: 0;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        .main_main_contents{
+            padding: 0;
+           position: relative;
+            .contact_wrapper{
+                width: calc(100vw - 40px);
+                height: auto;
+                margin: 10px auto 0;
+                background: rgba(255, 255, 255, 0.95);
+                padding: 18px 12px;
+                position: relative;
+                h2{
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: #037ABC;
+                    margin-bottom: 10px;
+                    text-align: center;
+                }
+                a{
+                    font-size: 16px;
+                    color: #fff;
+                    width: 172px;
+                    display: block;
+                    height: 32px;
+                    margin: 0 auto;
+                    background: #F98CB6;
+                    text-align: center;
+                    line-height: 32px;
+                    border-radius: 20px;
+                }
+                &::after{
+                    content: url(/assets/img/login/sakura_login.svg);
+                    display: block;
+                    width: 92px;
+                    position: absolute;
+                    right: -5%;
+                    top: -20%;
+                }
+                &_icon{
+                    display: flex;
+                    height: auto;
+                    background: rgba(255, 255, 255, 0.95);
+
+                    // レイアウト案01
+                    margin: 20px auto 0;
+
+                    // レイアウト案02
+                   /*  margin: -24px auto 0;
+                    padding: 25px 12px; */
+
+                    &_inner{
+                        display :grid; 
+                        grid-template-columns: 132px 132px;
+                        grid-template-rows: 1fr 1fr;
+                        grid-gap: 15px;
+                        margin: 0 auto;
+                        a{
+                            img{
+                                width: 132px;
+                                height: auto;
+                            }
+                        }
+                    }
+                  
+                }
+               
             }
-            &:nth-child(2){
-                background-color: #fff;
+        }
+    }
+    .main_main_contents{
+        position: relative;
+        .sakura{
+            position: absolute;
+            width: 100vw;
+            z-index: 10;
+            &_first{
+                left: 0px;
+            top: -40px;
+            }
+            &_last{
+                bottom: -25px;
             }
         }
     }

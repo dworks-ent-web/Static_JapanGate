@@ -990,6 +990,20 @@ body .main_top {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
+  /*  &::after{
+                content: url("/assets/img/common/sakura_line02.svg");
+                position: absolute;
+                width: 100vw;
+                height: auto;
+                z-index: 10;
+                bottom: -32px;
+            } */
+  /*  &_first{
+                padding-top: 20px;
+            }
+            &_last::after{
+                content: "";
+            } */
 }
 
 body .main_top .contact_wrapper {
@@ -1035,7 +1049,6 @@ body .main_top .contact_wrapper_icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: calc(100vw - 40px);
   height: auto;
   background: rgba(255, 255, 255, 0.95);
   margin: 20px auto 0;
@@ -1060,25 +1073,114 @@ body .main_top .contact_wrapper_icon_inner a img {
   height: auto;
 }
 
-body .main_top::after {
-  content: url("/assets/img/common/sakura_line02.svg");
+body .main_top_second {
+  padding: 30px 0 50px 0;
+  margin: 0;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+body .main_top_second .main_main_contents {
+  padding: 0;
+  position: relative;
+}
+
+body .main_top_second .main_main_contents .contact_wrapper {
+  width: calc(100vw - 40px);
+  height: auto;
+  margin: 10px auto 0;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 18px 12px;
+  position: relative;
+}
+
+body .main_top_second .main_main_contents .contact_wrapper h2 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #037ABC;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+body .main_top_second .main_main_contents .contact_wrapper a {
+  font-size: 16px;
+  color: #fff;
+  width: 172px;
+  display: block;
+  height: 32px;
+  margin: 0 auto;
+  background: #F98CB6;
+  text-align: center;
+  line-height: 32px;
+  border-radius: 20px;
+}
+
+body .main_top_second .main_main_contents .contact_wrapper::after {
+  content: url(/assets/img/login/sakura_login.svg);
+  display: block;
+  width: 92px;
+  position: absolute;
+  right: -5%;
+  top: -20%;
+}
+
+body .main_top_second .main_main_contents .contact_wrapper_icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+  background: rgba(255, 255, 255, 0.95);
+  margin: 20px auto 0;
+  /*  margin: -24px auto 0;
+                    padding: 25px 12px; */
+}
+
+body .main_top_second .main_main_contents .contact_wrapper_icon_inner {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 132px 132px;
+      grid-template-columns: 132px 132px;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  grid-gap: 15px;
+  margin: 0 auto;
+}
+
+body .main_top_second .main_main_contents .contact_wrapper_icon_inner a img {
+  width: 132px;
+  height: auto;
+}
+
+body .main_main_contents {
+  position: relative;
+}
+
+body .main_main_contents .sakura {
   position: absolute;
   width: 100vw;
-  height: auto;
   z-index: 10;
-  bottom: -32px;
 }
 
-body .main_top_first {
-  padding-top: 20px;
+body .main_main_contents .sakura_first {
+  left: 0px;
+  top: -40px;
 }
 
-body .main_top_last::after {
-  content: "";
-}
-
-body .main_top:nth-child(2) {
-  background-color: #fff;
+body .main_main_contents .sakura_last {
+  bottom: -25px;
 }
 
 body .top_container {
