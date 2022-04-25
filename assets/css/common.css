@@ -910,8 +910,8 @@ main p.login_register {
   color: #333;
 }
 
-footer ul li .login_ftr {
-  height: 20px;
+footer ul li img {
+  height: 25px;
 }
 
 /* TOP
