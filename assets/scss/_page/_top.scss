@@ -54,6 +54,15 @@ body{
             align-items: center;
             justify-content: center;
             position: relative;
+            &_first{
+                height: auto;
+            }
+            &_second{
+                height:auto;
+            }
+            &_last{
+                height: auto;
+            }
             .contact_wrapper{
                 width: calc(100vw - 40px);
                 height: auto;

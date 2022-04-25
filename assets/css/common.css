@@ -156,7 +156,7 @@ main {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  height: auto;
+  height: 160px;
   padding: 30px 0 45px;
   border: 1px solid #efefef;
   background: url(/assets/img/common/bg_yagasuri_yellow.svg);
@@ -1004,6 +1004,18 @@ body .main_top {
             &_last::after{
                 content: "";
             } */
+}
+
+body .main_top_first {
+  height: auto;
+}
+
+body .main_top_second {
+  height: auto;
+}
+
+body .main_top_last {
+  height: auto;
 }
 
 body .main_top .contact_wrapper {
