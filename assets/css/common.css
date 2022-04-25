@@ -750,6 +750,21 @@ footer #copyright a {
 
 /* LOGIN
 =========================*/
+header .container .sp-nav .bg_circle img {
+  height: 20px;
+  width: auto;
+}
+
+header .container .sp-nav .bg_blue {
+  height: 20px;
+}
+
+header .header__lang li a img {
+  height: 28px;
+  width: auto;
+  margin-right: 0;
+}
+
 main .container {
   position: relative;
   background-color: #EDF7FC;
@@ -861,7 +876,9 @@ main .container + p a {
   text-decoration: underline;
 }
 
-main .container #btn_google__login {
+main .container .google__login {
+  color: #333;
+  font-size: 14px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -871,7 +888,7 @@ main .container #btn_google__login {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 132px;
+  width: 180px;
   height: 34px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -883,18 +900,18 @@ main .container #btn_google__login {
   cursor: pointer;
 }
 
-main .container #btn_google__login:hover {
+main .container .google__login:hover {
   -webkit-box-shadow: 0 0 3px 3px rgba(66, 133, 244, 0.3);
           box-shadow: 0 0 3px 3px rgba(66, 133, 244, 0.3);
 }
 
-main .container #btn_google__login img {
+main .container .google__login img {
   width: 17px;
   height: 17px;
   margin-right: 8px;
 }
 
-main .container #btn_google__login .buttonText {
+main .container .google__login .buttonText {
   margin-top: 2px;
   color: #555;
   font-size: 11px;
@@ -910,8 +927,28 @@ main p.login_register {
   color: #333;
 }
 
-footer ul li img {
+.login_click {
+  margin: 5px auto 0 !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: calc(100vw - 40px);
+}
+
+.login_click_img {
+  height: 20px;
+  width: auto;
+}
+
+footer ul li .login_ftr {
   height: 25px;
+  width: auto;
 }
 
 /* TOP

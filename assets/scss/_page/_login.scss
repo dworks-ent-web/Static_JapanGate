@@ -1,6 +1,31 @@
 /* LOGIN
 =========================*/
-
+header{
+	.container{
+		.sp-nav{
+			.bg_circle{
+				img{
+					height: 20px;
+					width: auto;
+				}
+			}
+			.bg_blue{
+				height: 20px; 
+			}
+		}
+	}
+	.header__lang{
+		li{
+			a{
+				img{
+					height: 28px;
+					width: auto;
+					margin-right: 0;
+				}
+			}
+		}
+	}
+}
 main {
 	.container {
 		position: relative;
@@ -100,11 +125,13 @@ main {
 		}
 
 		// googleボタンカスタマイズ
-		#btn_google__login {
+		.google__login {
+			color: #333;
+			font-size: 14px;
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			width: 132px;
+			width: 180px;
 			height: 34px;
 			box-sizing: border-box;
 			margin: 8px auto;
@@ -113,22 +140,21 @@ main {
 			border-bottom: solid 1px #B9C1C5;
 			border-radius: 5px;
 			cursor: pointer;
+				&:hover{
+					box-shadow: 0 0 3px 3px rgba(66, 133, 244, .3);
+				}
 
-			&:hover {
-				box-shadow: 0 0 3px 3px rgba(66, 133, 244, .3);
-			}
+				img{
+					width: 17px;
+					height: 17px;
+					margin-right: 8px;
+				}
 
-			img {
-				width: 17px;
-				height: 17px;
-				margin-right: 8px;
-			}
-
-			.buttonText {
-				margin-top: 2px;
-				color: #555;
-				font-size: 11px;
-			}
+				.buttonText{
+					margin-top: 2px;
+					color: #555;
+					font-size: 11px;
+				}
 		}
 	}
 	p.login_register {
@@ -141,11 +167,24 @@ main {
 		color: #333;
 	}
 }
+.login_click{
+	margin: 5px auto 0!important;
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-start;
+	width: calc(100vw - 40px);
+	&_img{
+		height: 20px;
+		width: auto;
+	}
+}
+
 footer{
 	ul{
 		li{
-			img{
+			.login_ftr{
 				height: 25px;
+				width: auto;
 			}
 		}
 	}
