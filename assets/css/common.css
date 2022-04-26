@@ -751,12 +751,13 @@ footer #copyright a {
 /* LOGIN
 =========================*/
 header .container .sp-nav .bg_circle img {
-  height: 20px;
+  height: 22px;
   width: auto;
 }
 
-header .container .sp-nav .bg_blue {
-  height: 20px;
+header .container .sp-nav ul li img {
+  height: 22px;
+  width: auto;
 }
 
 header .header__lang li a img {

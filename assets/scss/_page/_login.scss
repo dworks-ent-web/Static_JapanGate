@@ -5,12 +5,17 @@ header{
 		.sp-nav{
 			.bg_circle{
 				img{
-					height: 20px;
+					height: 22px;
 					width: auto;
 				}
 			}
-			.bg_blue{
-				height: 20px; 
+			ul{
+				li{
+					img{
+						height: 22px;
+						width: auto;
+					}
+				}
 			}
 		}
 	}
