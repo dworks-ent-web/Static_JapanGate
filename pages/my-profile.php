@@ -88,7 +88,7 @@
             </ul>
         </div>
     </header>
-	<main class="main">
+<main class="main">
 
 		<div class="main_top">
 			<div class="top_contents">
